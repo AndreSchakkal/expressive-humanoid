@@ -53,6 +53,10 @@ import os
 import multiprocessing
 from tqdm import tqdm
 from poselib.skeleton.skeleton3d import SkeletonMotion
+import sys
+
+sys.path.append('/home/schakkal/fbxpythonbindings/build/Distrib/site-packages/fbx/')
+import fbx
 
 def process_file(i, fbx_file, all_fbx_path):
     try:

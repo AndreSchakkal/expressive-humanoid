@@ -48,7 +48,8 @@ class LeggedRobotCfg(BaseConfig):
 
         num_observations = n_proprio + n_scan + history_len*n_proprio + n_priv_latent + n_priv #n_scan + n_proprio + n_priv #187 + 47 + 5 + 12 
         num_privileged_obs = None # if not None a priviledge_obs_buf will be returned by step() (critic obs for assymetric training). None is returned otherwise 
-        num_actions = 19
+        # num_actions = 19
+        num_actions = 23
         env_spacing = 3.  # not used with heightfields/trimeshes 
         send_timeouts = True # send time out information to the algorithm
         episode_length_s = 20 # episode length in seconds
@@ -134,13 +135,14 @@ class LeggedRobotCfg(BaseConfig):
             height_measurements = 0.02
 
     class terrain:
-        mesh_type = 'trimesh' # "heightfield" # none, plane, heightfield or trimesh
+        # mesh_type = 'trimesh' # "heightfield" # none, plane, heightfield or trimesh
+        mesh_type = 'plane' # "heightfield" # none, plane, heightfield or trimesh
         hf2mesh_method = "grid"  # grid or fast
         max_error = 0.1 # for fast
         max_error_camera = 2
 
         y_range = [-0.4, 0.4]
-        
+
         edge_width_thresh = 0.05
         horizontal_scale = 0.15 # [m] influence computation time by a lot
         horizontal_scale_camera = 0.1
@@ -155,7 +157,7 @@ class LeggedRobotCfg(BaseConfig):
 
         all_vertical = False
         no_flat = True
-        
+
         static_friction = 1.0
         dynamic_friction = 1.0
         restitution = 0.
@@ -269,7 +271,8 @@ class LeggedRobotCfg(BaseConfig):
         randomize_motor = True
         motor_strength_range = [0.8, 1.2]
 
-        delay_update_global_steps = 24 * 8000
+        # delay_update_global_steps = 24 * 8000
+        delay_update_global_steps = 24 * 13000
         action_delay = False
         action_curr_step = [1, 1]
         action_curr_step_scratch = [0, 1]

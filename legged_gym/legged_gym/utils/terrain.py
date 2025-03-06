@@ -45,8 +45,8 @@ class Terrain:
         self.cfg = cfg
         self.num_robots = num_robots
         self.type = cfg.mesh_type
-        if self.type in ["none", 'plane']:
-            return
+        # if self.type in ["none", 'plane']:
+        #     return
         self.env_length = cfg.terrain_length
         self.env_width = cfg.terrain_width
 

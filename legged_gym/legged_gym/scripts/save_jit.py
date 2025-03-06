@@ -87,21 +87,36 @@ class HardwareRefNN(nn.Module):
         # return obs, depth_latent
 
 def play(args):    
-    load_run = "../../logs/h1/" + args.exptid
+    # load_run = "../../logs/h1/" + args.exptid
+    load_run = "../../logs/g1/" + args.exptid
     checkpoint = args.checkpoint
 
-    n_priv_explicit = 3
-    n_priv_latent = 4 + 1 + 19*2
-    num_scan = 0
-    num_actions = 19
+    # n_priv_explicit = 3
+    # n_priv_latent = 4 + 1 + 19*2
+    # num_scan = 0
+    # num_actions = 19
     
-    n_proprio = 3 + 2 + 2 + 19*3 + 2
+    # n_proprio = 3 + 2 + 2 + 19*3 + 2
+    # history_len = 10
+    
+    # num_demo = 9 + 3 + 3 + 3 + 6*3
+    # feat_hist_len = 4
+    # text_feat_input_dim = feat_hist_len * n_proprio
+    # text_feat_output_dim = 16
+
+    n_priv_explicit = 3
+    n_priv_latent = 4 + 1 + 23*2
+    num_scan = 0
+    num_actions = 23
+    
+    n_proprio = 3 + 2 + 2 + 23*3 + 2
     history_len = 10
     
-    num_demo = 9 + 3 + 3 + 3 + 6*3
+    num_demo = 9 + 3 + 3 + 3 +6*3 + 9 + 23 - 4 #without ankle
     feat_hist_len = 4
     text_feat_input_dim = feat_hist_len * n_proprio
     text_feat_output_dim = 16
+
 
     device = torch.device('cpu')
     policy = HardwareRefNN(n_proprio, 

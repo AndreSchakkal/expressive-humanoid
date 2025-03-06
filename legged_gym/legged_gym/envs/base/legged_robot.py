@@ -242,6 +242,7 @@ class LeggedRobot(BaseTask):
         self.projected_gravity[:] = quat_rotate_inverse(self.base_quat, self.gravity_vec)
         self.base_lin_acc = (self.root_states[:, 7:10] - self.last_root_vel[:, :3]) / self.dt
 
+        print("self.base_quat ", self.base_quat)
         self.roll, self.pitch, self.yaw = euler_from_quaternion(self.base_quat)
 
         contact = torch.norm(self.contact_forces[:, self.feet_indices], dim=-1) > 2.
@@ -256,10 +257,12 @@ class LeggedRobot(BaseTask):
         self.check_termination()
         self.compute_reward()
         env_ids = self.reset_buf.nonzero(as_tuple=False).flatten()
+        # self.reset_buf = torch.zeros(self.contact_forces.shape[0], dtype=torch.bool, device=self.contact_forces.device)
+        # env_ids = self.reset_buf.nonzero(as_tuple=False).flatten()
         self.reset_idx(env_ids)
 
-        self.cur_goals = self._gather_cur_goals()
-        self.next_goals = self._gather_cur_goals(future=1)
+        # self.cur_goals = self._gather_cur_goals()
+        # self.next_goals = self._gather_cur_goals(future=1)
 
         self.update_depth_buffer()
 
@@ -449,7 +452,7 @@ class LeggedRobot(BaseTask):
         start = time()
         print("*"*80)
         print("Start creating ground...")
-        if mesh_type in ['heightfield', 'trimesh']:
+        if mesh_type in ['heightfield', 'trimesh', 'plane']:
             self.terrain = Terrain(self.cfg.terrain, self.num_envs)
         if mesh_type=='plane':
             self._create_ground_plane()
@@ -964,7 +967,8 @@ class LeggedRobot(BaseTask):
         feet_names = [s for s in body_names if self.cfg.asset.foot_name in s]
         self.torso_idx = self.gym.find_asset_rigid_body_index(robot_asset, self.cfg.asset.torso_name)
 
-        for s in ["left_ankle_link", "right_ankle_link"]:
+        for s in ['left_ankle_roll_link', 'right_ankle_roll_link']:
+        # for s in ["left_ankle_link", "right_ankle_link"]:
             feet_idx = self.gym.find_asset_rigid_body_index(robot_asset, s)
             sensor_pose = gymapi.Transform(gymapi.Vec3(0.0, 0.0, 0.0))
             self.gym.create_asset_force_sensor(robot_asset, feet_idx, sensor_pose)
@@ -1048,7 +1052,7 @@ class LeggedRobot(BaseTask):
         """ Sets environment origins. On rough terrain the origins are defined by the terrain platforms.
             Otherwise create a grid.
         """
-        if self.cfg.terrain.mesh_type in ["heightfield", "trimesh"]:
+        if self.cfg.terrain.mesh_type in ["heightfield", "trimesh", "plane"]:
             self.custom_origins = True
             self.env_origins = torch.zeros(self.num_envs, 3, device=self.device, requires_grad=False)
             self.env_class = torch.zeros(self.num_envs, device=self.device, requires_grad=False)
@@ -1303,8 +1307,11 @@ class LeggedRobot(BaseTask):
     
     def _reward_feet_stumble(self):
         # Penalize feet hitting vertical surfaces
+        # rew = torch.any(torch.norm(self.contact_forces[:, self.feet_indices, :2], dim=2) >\
+        #      4 *torch.abs(self.contact_forces[:, self.feet_indices, 2]), dim=1)
+        # return rew.float()
         rew = torch.any(torch.norm(self.contact_forces[:, self.feet_indices, :2], dim=2) >\
-             4 *torch.abs(self.contact_forces[:, self.feet_indices, 2]), dim=1)
+             5 *torch.abs(self.contact_forces[:, self.feet_indices, 2]), dim=1)
         return rew.float()
 
     def _reward_feet_edge(self):

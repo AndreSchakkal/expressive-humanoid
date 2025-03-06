@@ -2,6 +2,10 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from ruamel.yaml import YAML
 import numpy as np
+import sys
+
+sys.path.append('/home/schakkal/fbxpythonbindings/build/Distrib/site-packages/fbx/')
+
 
 path = "./data/configs/"
 def find_entries(word, column):

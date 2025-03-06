@@ -691,7 +691,9 @@ class H1Mimic(LeggedRobot):
 
     def _reward_tracking_demo_dof_pos(self):
         demo_dofs = self._curr_demo_obs_buf[:, :self._n_demo_dof]
+
         dof_pos = self.dof_pos[:, self._dof_ids_subset]
+
         rew = torch.exp(-0.7 * torch.norm((dof_pos - demo_dofs), dim=1))
         # print(rew[self.lookat_id].cpu().numpy())
         # print("dof_pos", dof_pos)
@@ -738,13 +740,16 @@ class H1Mimic(LeggedRobot):
         # cur_key_body_pos_local = global_to_local(self.base_quat, self.rigid_body_states[:, self._key_body_ids_sim[self._key_body_ids_sim_subset], :3], self.root_states[:, :3]).view(self.num_envs, -1)
         
         demo_key_body_pos_local = self._curr_demo_keybody.view(self.num_envs, self._num_key_bodies, 3)
+        # print("demo_key_body_pos_local: ", demo_key_body_pos_local.shape)
+
         if self.cfg.motion.global_keybody:
             curr_demo_xyz = torch.cat((self.target_pos_abs, self._curr_demo_root_pos[:, 2:3]), dim=-1)
         else:
             curr_demo_xyz = torch.cat((self.root_states[:, :2], self._curr_demo_root_pos[:, 2:3]), dim=-1)
         demo_global_body_pos = local_to_global(self._curr_demo_quat, demo_key_body_pos_local, curr_demo_xyz).view(self.num_envs, -1)
         cur_global_body_pos = self.rigid_body_states[:, self._key_body_ids_sim[self._key_body_ids_sim_subset], :3].view(self.num_envs, -1)
-
+        # print("cur_global_body_pos: ", cur_global_body_pos)
+        # print("demo_global_body_pos: ", demo_global_body_pos)
         # cur_local_body_pos = global_to_local(self.base_quat, cur_global_body_pos.view(self.num_envs, -1, 3), self.root_states[:, :3]).view(self.num_envs, -1)
         # print(cur_local_body_pos)
         rew = torch.exp(-torch.norm(cur_global_body_pos - demo_global_body_pos, dim=1))

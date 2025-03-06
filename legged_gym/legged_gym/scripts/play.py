@@ -62,8 +62,10 @@ def play(args):
     if args.web:
         web_viewer = webviewer.WebViewer()
     args.task = "h1_mimic_eval" if args.task == "h1_mimic" or args.task == "h1_mimic_amp" else args.task
+    # args.task = "g1_mimic_eval" if args.task == "g1_mimic" or args.task == "g1_mimic_amp" else args.task
     faulthandler.enable()
     exptid = args.exptid
+    args.proj_name = args.task[:2]
     log_pth = "../../logs/{}/".format(args.proj_name) + args.exptid
 
     env_cfg, train_cfg = task_registry.get_cfgs(name=args.task)
@@ -187,6 +189,7 @@ def play(args):
         data_buf = torch.zeros(env.num_envs, traj_length, 15)
     for i in tqdm(range(traj_length)):
         if args.use_jit:
+            # print(obs.shape)
             obs = obs[:, env.cfg.env.n_feature:]
             actions = policy_jit(obs.detach())
         elif if_distill:
@@ -206,6 +209,8 @@ def play(args):
         else:
             est_states = estimator(obs.detach()[:, train_cfg.estimator.prop_start:train_cfg.estimator.prop_start+train_cfg.estimator.prop_dim])
             # obs[:, train_cfg.estimator.priv_start:train_cfg.estimator.priv_start+train_cfg.estimator.priv_states_dim] = est_states
+            # print("est_states ", est_states)
+            # print("indices ", train_cfg.estimator.priv_start,train_cfg.estimator.priv_start+train_cfg.estimator.priv_states_dim)
             actions = policy(obs.detach(), hist_encoding=True)
             
         obs, _, rews, dones, infos = env.step(actions.detach())

@@ -59,6 +59,9 @@ class H1MimicCfg( LeggedRobotCfg ):
         motion_type = "yaml"
         motion_name = "motions_autogen_all_no_run_jump.yaml"
 
+        motion_type = "single" 
+        motion_name = "02_01"
+
         global_keybody = False
         global_keybody_reset_time = 2
 

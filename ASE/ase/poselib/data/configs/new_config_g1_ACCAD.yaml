@@ -1,0 +1,1491 @@
+motions:
+  root: "../g1_retarget_npy/"
+
+  '0-ACCAD_Female1General_c3d_A1 - Stand_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Female1General_c3d_A10 - lie to crouch_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Female1General_c3d_A14 - stand to skip_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Female1General_c3d_A15 - skip to stand_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Female1General_c3d_A2 - Sway t2_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Female1General_c3d_A2 - Sway_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Female1General_c3d_A3 - Swing t2_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Female1General_c3d_A3 - Swing_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Female1General_c3d_A4 - look_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Female1General_c3d_A5 - pick up box_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Female1General_c3d_A6 - lift box_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Female1General_c3d_A6- lift box t2_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Female1General_c3d_A7 - crouch_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Female1General_c3d_A8 - crouch to lie_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Female1Gestures_c3d_D1 - Urban 1_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Female1Gestures_c3d_D2 - Wait 1_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Female1Gestures_c3d_D3 - Conversation Gestures_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Female1Gestures_c3d_D5 - Random Stuff 2_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Female1Gestures_c3d_D6- CartWheel_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Female1Gestures_c3d_Female1 Subj Calibration_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Female1Running_c3d_C10 -  run backwards stop run forward_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Female1Running_c3d_C11 -  run turn left (90)_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Female1Running_c3d_C13 -  run turn left (135)_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Female1Running_c3d_C14 -  run turn right  (90)_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Female1Running_c3d_C15 -  run turn right  (45)_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Female1Running_c3d_C16 -  run turn right  (135)_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Female1Running_c3d_C19 -  run to hop to walk_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Female1Running_c3d_C2 - Run to stand_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Female1Running_c3d_C20 -  run to jump to walk_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Female1Running_c3d_C21 -  run to pick up box_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Female1Running_c3d_C21 s2 -  run to pick up box_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Female1Running_c3d_C22 -  run with box_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Female1Running_c3d_C24 -  side step left_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Female1Running_c3d_C25 -  side step right_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Female1Running_c3d_C26 -  run to crouch_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Female1Running_c3d_C27 - crouch to run1_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Female1Running_c3d_C3 - Run_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Female1Running_c3d_C4 - Run to walk1_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Female1Running_c3d_C5 - walk to run_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Female1Running_c3d_C6 - stand to run backwards_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Female1Running_c3d_C7 -  run backwards_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Female1Running_c3d_C8 -  run backwards to stand_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Female1Running_c3d_C9 -  run backwards turn run forward_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Female1Walking_c3d_B1 - stand to walk_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Female1Walking_c3d_B10 - walk turn left (45)_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Female1Walking_c3d_B11 - walk turn left (135)_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Female1Walking_c3d_B12 - walk turn right (90)_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Female1Walking_c3d_B13 - walk turn right (45)_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Female1Walking_c3d_B14 - walk turn right (135)_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Female1Walking_c3d_B15 - walk turn around (same direction)_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Female1Walking_c3d_B16 - walk turn change direction_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Female1Walking_c3d_B17 - walk to hop to walk1_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Female1Walking_c3d_B18 - walk to leap to walk_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Female1Walking_c3d_B19 - walk to pick up box_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Female1Walking_c3d_B2 - walk to stand t2_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Female1Walking_c3d_B2 - walk to stand_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Female1Walking_c3d_B20 - walk with box_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Female1Walking_c3d_B21 - put down box to walk_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Female1Walking_c3d_B21 s2 - put down box to walk_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Female1Walking_c3d_B21 s3 - put down box to walk_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Female1Walking_c3d_B22 - side step left_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Female1Walking_c3d_B23 - side step right_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Female1Walking_c3d_B24 - walk to crouch_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Female1Walking_c3d_B25 - crouch to walk1_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Female1Walking_c3d_B27 -skip to walk1_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Female1Walking_c3d_B3 - walk1_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Female1Walking_c3d_B4 - stand to walk back_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Female1Walking_c3d_B5 - walk backwards_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Female1Walking_c3d_B6 - walk backwards to stand_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Female1Walking_c3d_B7 - walk backwards turn forwards_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Female1Walking_c3d_B9 - walk turn left (90)_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male1General_c3d_General A1 - Stand_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male1General_c3d_General A11 -   Military Crawl Forward_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male1General_c3d_General A12 -   Military Crawl Backwards_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male1General_c3d_General A2 - Sway t2_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male1General_c3d_General A2 - Sway t3_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male1General_c3d_General A2 - Sway_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male1General_c3d_General A3 - Swing Arms While Stand_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male1General_c3d_General A4 - Look Around_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male1General_c3d_General A5 - Pick Up Box_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male1General_c3d_General A6 - Lift Box_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male1General_c3d_General A7 - Crouch_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male1General_c3d_General A8 -  Crourch to Lie (forward)_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male1General_c3d_General A8 - Crouch to Lie Down_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male1General_c3d_General A9 -   Lie (forward) t2_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male1General_c3d_General A9 -   Lie (forward)_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male1General_c3d_General A9 -  Lie Down_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male1Running_c3d_Run C24 - quick side step left_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male1Running_c3d_Run C25 - quick side step right_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male1Walking_c3d_Male1 Cal_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male1Walking_c3d_Walk B10 - Walk turn left 45_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male1Walking_c3d_Walk B13 - Walk turn right 45_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male1Walking_c3d_Walk B15 - Walk turn around_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male1Walking_c3d_Walk B16 - Walk turn change_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male1Walking_c3d_Walk B17 - Walk 2 hop 2 walk_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male1Walking_c3d_Walk B21 - Put Down Box to walk_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male1Walking_c3d_Walk B22 - Side step left_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male1Walking_c3d_Walk B23 - Side step right_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male1Walking_c3d_Walk B4 - Stand to Walk Back_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2General_c3d_A1- Stand_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2General_c3d_A10- Lie to crouch_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2General_c3d_A11- Crawl_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2General_c3d_A12- Crawl Backwards_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2General_c3d_A2- Sway_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2General_c3d_A3- Swing arms_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2General_c3d_A4- Look Around_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2General_c3d_A5- Pick up box_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2General_c3d_A6- Box lift_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2General_c3d_A7- Crouch_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2General_c3d_A8- Crouch to Lie_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2General_c3d_A9- Lie_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2General_c3d_male2 Calibration_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2MartialArtsExtended_c3d_Extended 1_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2MartialArtsExtended_c3d_Extended 2_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2MartialArtsExtended_c3d_Extended 3_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2MartialArtsExtended_c3d_Form 1_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2MartialArtsKicks_c3d_G10-  roundhouse leading left_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2MartialArtsKicks_c3d_G11-  roundhouse leading right_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2MartialArtsKicks_c3d_G12-  cresent left_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2MartialArtsKicks_c3d_G13-  cresent right_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2MartialArtsKicks_c3d_G14-  roundhouse body left_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2MartialArtsKicks_c3d_G15-  roundhouse body right_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2MartialArtsKicks_c3d_G16-  double kick_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2MartialArtsKicks_c3d_G17-  push kick left_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2MartialArtsKicks_c3d_G18-  push kick right_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2MartialArtsKicks_c3d_G19-  reverse spin cresent left t2_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2MartialArtsKicks_c3d_G19-  reverse spin cresent left_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2MartialArtsKicks_c3d_G2 - Sidekick leading left_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2MartialArtsKicks_c3d_G20 -  reverse spin cresent right_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2MartialArtsKicks_c3d_G3 - Sidekick leading right_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2MartialArtsKicks_c3d_G3 - front kick_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2MartialArtsKicks_c3d_G4 -spinning back kick_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2MartialArtsKicks_c3d_G5 -  back kick_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2MartialArtsKicks_c3d_G6 -  axe kick_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2MartialArtsKicks_c3d_G7 -  capoera_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2MartialArtsKicks_c3d_G8 -  roundhouse left_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2MartialArtsKicks_c3d_G9 -  roundhouse right_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2MartialArtsKicks_c3d_G9-  roundhouse right t2_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2MartialArtsKicks_c3d_male2 Subject Cal 2_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2MartialArtsPunches_c3d_E1 -  Jab left_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2MartialArtsPunches_c3d_E10 - body hook right_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2MartialArtsPunches_c3d_E11 - backfist left_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2MartialArtsPunches_c3d_E11 - body hook right t2_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2MartialArtsPunches_c3d_E12 - backfist right_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2MartialArtsPunches_c3d_E13 - body cross left_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2MartialArtsPunches_c3d_E14 - body cross left t2_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2MartialArtsPunches_c3d_E14 - body cross right_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2MartialArtsPunches_c3d_E15 - body jab right_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2MartialArtsPunches_c3d_E16 - body jab left_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2MartialArtsPunches_c3d_E2 -  Jab right_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2MartialArtsPunches_c3d_E3 -  cross left_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2MartialArtsPunches_c3d_E4 -  cross right_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2MartialArtsPunches_c3d_E5 -  hook left_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2MartialArtsPunches_c3d_E6 -  hook right_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2MartialArtsPunches_c3d_E7 - uppercut left_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2MartialArtsPunches_c3d_E8 - uppercut right_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2MartialArtsPunches_c3d_E9 - body hook left_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2MartialArtsStances_c3d_D1 - stand to ready_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2MartialArtsStances_c3d_D10 - victory 2_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2MartialArtsStances_c3d_D11 - ready to taunt one to ready_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2MartialArtsStances_c3d_D12 - ready to taunt two to ready_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2MartialArtsStances_c3d_D13 -crouch to ready_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2MartialArtsStances_c3d_D14 -ready to crouch_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2MartialArtsStances_c3d_D15 - switch stance_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2MartialArtsStances_c3d_D16 - switch stance and bounce_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2MartialArtsStances_c3d_D2 - walk to ready_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2MartialArtsStances_c3d_D3 - run to ready_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2MartialArtsStances_c3d_D4 - ready to relax_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2MartialArtsStances_c3d_D5 - ready to walk away_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2MartialArtsStances_c3d_D7 - walk to bow_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2MartialArtsStances_c3d_D8 - bow to ready_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2MartialArtsStances_c3d_D9 - t2 - male2 blanks_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2MartialArtsStances_c3d_D9 - victory 1_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2MartialArtsStances_c3d_D9 - warm up to ready to warm up_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2Running_c3d_C1 - stand to run_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2Running_c3d_C11 - run turn left 90_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2Running_c3d_C12 - run turn left 45_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2Running_c3d_C13 - run turn left 135_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2Running_c3d_C14 - run turn right 90_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2Running_c3d_C15 - run turn right 45_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2Running_c3d_C16 - run turn right 135_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2Running_c3d_C17 - run change direction_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2Running_c3d_C18 - run to hop to walk_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2Running_c3d_C19 - run to jump to walk_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2Running_c3d_C20 - run to pickup box_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2Running_c3d_C23 - put down box to run_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2Running_c3d_C24 - quick sidestep left_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2Running_c3d_C25 - quick sidestep right_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2Running_c3d_C26 - run to crouch_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2Running_c3d_C3 - run_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2Running_c3d_C4 - run to walk a_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2Running_c3d_C4 - run to walk_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2Running_c3d_C5 - walk to run_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2Running_c3d_C6 - stand to run backwards_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2Running_c3d_C7 - run backwards t2_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2Running_c3d_C8 - run backwards to stand_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2Running_c3d_C9 - run backwards turn run forward_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2Walking_c3d_B10 -  Walk turn left 45_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2Walking_c3d_B11 -  Walk turn left 135_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2Walking_c3d_B13 -  Walk turn right 90_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2Walking_c3d_B14 -  Walk turn right 45 t2_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2Walking_c3d_B14 -  Walk turn right 45_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2Walking_c3d_B15 -  Walk turn around_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2Walking_c3d_B17 -  Walk to hop to walk a_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2Walking_c3d_B17 -  Walk to hop to walk_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2Walking_c3d_B18 -  Walk to leap to walk t2_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2Walking_c3d_B18 -  Walk to leap to walk t3_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2Walking_c3d_B18 -  Walk to leap to walk_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2Walking_c3d_B19 -  Walk to pickup box_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2Walking_c3d_B20 -  Walk with box_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2Walking_c3d_B21 -  put down box to walk a_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2Walking_c3d_B21 -  put down box to walk_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2Walking_c3d_B22 -  side step left_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2Walking_c3d_B23 -  side step right_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2Walking_c3d_B24 -  walk to crouch_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2Walking_c3d_B26 -  walk to skip_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2Walking_c3d_B27 -  skip to walk a_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2Walking_c3d_B4 - Stand to Walk backwards_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2Walking_c3d_B5 -  Walk backwards_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_Male2Walking_c3d_B9 -  Walk turn left 90_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_MartialArtsWalksTurns_c3d_E1 - Turn around right_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_MartialArtsWalksTurns_c3d_E10 - side step right_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_MartialArtsWalksTurns_c3d_E11 - block left high_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_MartialArtsWalksTurns_c3d_E12 - block left low_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_MartialArtsWalksTurns_c3d_E13 - block right high_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_MartialArtsWalksTurns_c3d_E14 - block right low_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_MartialArtsWalksTurns_c3d_E15 - block left middle_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_MartialArtsWalksTurns_c3d_E16 - block right middle_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_MartialArtsWalksTurns_c3d_E17 - block middle high_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_MartialArtsWalksTurns_c3d_E18 - block middle low_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_MartialArtsWalksTurns_c3d_E19 - dodge left t2_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_MartialArtsWalksTurns_c3d_E19 - dodge left_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_MartialArtsWalksTurns_c3d_E2 - Turn around left_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_MartialArtsWalksTurns_c3d_E20 - dodge right_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_MartialArtsWalksTurns_c3d_E21 - duck left_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_MartialArtsWalksTurns_c3d_E22 - duck right_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_MartialArtsWalksTurns_c3d_E3 - advance_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_MartialArtsWalksTurns_c3d_E4 - quick advance_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_MartialArtsWalksTurns_c3d_E5 - retreat_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_MartialArtsWalksTurns_c3d_E6 - quick retreat_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_MartialArtsWalksTurns_c3d_E7 - super fast advance_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_MartialArtsWalksTurns_c3d_E8 - bounce_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_MartialArtsWalksTurns_c3d_E9 - side step left_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_s001_EricCamper04_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_s007_QkWalk1_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_s008_Run1_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_s009_Sprint1_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-ACCAD_s011_walkdog_poses':
+    description: unknown
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0

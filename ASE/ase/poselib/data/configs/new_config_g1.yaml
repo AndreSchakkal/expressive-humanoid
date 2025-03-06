@@ -1,0 +1,4549 @@
+motions:
+  root: "../g1_retarget_npy/"
+
+  '0-CMU_02_02_01_poses':
+    description: walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_02_02_02_poses':
+    description: walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_02_02_03_poses':
+    description: run, jog
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_02_02_04_poses':
+    description: jump, balance
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_02_02_05_poses':
+    description: punch, strike
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_02_02_06_poses':
+    description: bend over, scoop up, rise, lift arm
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_02_02_10_poses':
+    description: wash self
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_05_05_01_poses':
+    description: walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_05_05_02_poses':
+    description: dance - expressive arms, pirouette
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_05_05_03_poses':
+    description: dance - sideways arabesque, turn step, folding arms
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_05_05_04_poses':
+    description: dance - sideways arabesque, folding arms, bending back
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_05_05_05_poses':
+    description: dance - quasi-cou-de-pied, raised leg above hip-height, jete en tourant
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_05_05_06_poses':
+    description: dance - cartwheel-like start, pirouettes, jete
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_05_05_07_poses':
+    description: dance - small jetes, attitude, arabesque, shifted-axis pirouette,
+      turn
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_05_05_08_poses':
+    description: dance - rond de jambe in the air, jete, turn
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_05_05_09_poses':
+    description: dance - glissade devant, glissade derriere, attitude, arabesque
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_05_05_10_poses':
+    description: dance - glissade devant, glissade derriere, attitude, arabesque
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_05_05_11_poses':
+    description: dance - sideways steps, pirouette
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_05_05_12_poses':
+    description: dance - arms held high, pointe tendue a terre, upper body rotation
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_05_05_13_poses':
+    description: dance - small jetes, pirouette
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_05_05_14_poses':
+    description: dance - retire derriere, attitude, arabesque
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_05_05_15_poses':
+    description: dance - retire derriere, attitude, arabesque
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_05_05_16_poses':
+    description: dance - coupe dessous, jete en tourant
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_05_05_17_poses':
+    description: dance - coupe dessous, grand jete en tourant
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_05_05_18_poses':
+    description: dance - attitude, arabesque, jete en tourant, bending back
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_05_05_19_poses':
+    description: dance - attitude, arabesque, jete en tourant, bending back
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_05_05_20_poses':
+    description: dance - attitude, arabesque, jete en tourant, bending back
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_06_06_01_poses':
+    description: walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_06_06_03_poses':
+    description: basketball - forward dribble
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_06_06_04_poses':
+    description: basketball - forward dribble
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_06_06_05_poses':
+    description: basketball - forward dribble
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_06_06_06_poses':
+    description: basketball - backward dribble
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_06_06_07_poses':
+    description: basketball - backward dribble
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_06_06_08_poses':
+    description: basketball - sideways dribble
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_06_06_09_poses':
+    description: basketball - sideways dribble
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_06_06_10_poses':
+    description: basketball - forward dribble, 90-degree left turns
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_06_06_11_poses':
+    description: basketball - forward dribble, 90-degree right turns
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_06_06_12_poses':
+    description: basketball - forward dribble, 90-degree right turns, crossover dribble
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_06_06_13_poses':
+    description: basketball - low, fast free style dribble, dribble through legs
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_06_06_14_poses':
+    description: basketball - crossover dribble, shoot
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_06_06_15_poses':
+    description: basketball - dribble, shoot
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_07_07_01_poses':
+    description: walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_07_07_02_poses':
+    description: walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_07_07_03_poses':
+    description: walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_07_07_04_poses':
+    description: slow walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_07_07_05_poses':
+    description: slow walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_07_07_06_poses':
+    description: walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_07_07_07_poses':
+    description: walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_07_07_08_poses':
+    description: walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_07_07_09_poses':
+    description: walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_07_07_10_poses':
+    description: walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_07_07_11_poses':
+    description: walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_07_07_12_poses':
+    description: brisk walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_08_08_01_poses':
+    description: walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_08_08_02_poses':
+    description: walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_08_08_03_poses':
+    description: walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_08_08_04_poses':
+    description: slow walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_08_08_05_poses':
+    description: walk, stride
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_08_08_06_poses':
+    description: walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_08_08_07_poses':
+    description: walk, exaggerated stride
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_08_08_08_poses':
+    description: walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_08_08_09_poses':
+    description: walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_08_08_11_poses':
+    description: slow walk, stride
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_09_09_01_poses':
+    description: run
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_09_09_02_poses':
+    description: run
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_09_09_03_poses':
+    description: run
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_09_09_04_poses':
+    description: run
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_09_09_05_poses':
+    description: run
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_09_09_06_poses':
+    description: run
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_09_09_07_poses':
+    description: run
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_09_09_08_poses':
+    description: run
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_09_09_09_poses':
+    description: run
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_09_09_10_poses':
+    description: run
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_09_09_11_poses':
+    description: run
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_09_09_12_poses':
+    description: navigate - walk forward, backward, sideways
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_102_102_05_poses':
+    description: RunningStraight
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_102_102_06_poses':
+    description: RunningWideRight
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_102_102_07_poses':
+    description: RunningWideLeft
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_102_102_08_poses':
+    description: RunningTighterRight
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_102_102_10_poses':
+    description: RunningNoBall
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_102_102_16_poses':
+    description: WalkEvasiveLeft
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_102_102_17_poses':
+    description: WalkEvasiveRight
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_103_103_07_poses':
+    description: Casual Walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_105_105_01_poses':
+    description: WalkDigital8
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_105_105_02_poses':
+    description: WalkStraight
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_105_105_03_poses':
+    description: Walk8
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_105_105_05_poses':
+    description: mummyWalk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_105_105_09_poses':
+    description: DrunkWalk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_105_105_10_poses':
+    description: SlowWalk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_105_105_11_poses':
+    description: LavishWalk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_105_105_12_poses':
+    description: TooCoolWalk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_105_105_13_poses':
+    description: SadWalk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_105_105_14_poses':
+    description: DepressedWalk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_105_105_15_poses':
+    description: ClumsyWalk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_105_105_17_poses':
+    description: QuickWalk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_105_105_18_poses':
+    description: CarefulWalk LookingAround
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_105_105_20_poses':
+    description: ShyWalk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_105_105_21_poses':
+    description: acheyWalk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_105_105_22_poses':
+    description: CasualQuickWalk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_105_105_23_poses':
+    description: CoolWalk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_105_105_24_poses':
+    description: HurtLegWalk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_105_105_25_poses':
+    description: DragBadLegWalk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_105_105_26_poses':
+    description: HurtStomachWalk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_105_105_27_poses':
+    description: SlowWalk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_105_105_28_poses':
+    description: GhettoWalk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_105_105_29_poses':
+    description: NormalWalk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_105_105_30_poses':
+    description: SexyWalk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_105_105_31_poses':
+    description: NormalWalk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_105_105_33_poses':
+    description: MachoWalk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_105_105_34_poses':
+    description: NormalWalk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_105_105_35_poses':
+    description: TrafficWalk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_105_105_36_poses':
+    description: WalkStraight
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_105_105_39_poses':
+    description: JumpForward
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_105_105_40_poses':
+    description: JumpForward
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_105_105_41_poses':
+    description: JumpForward
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_105_105_42_poses':
+    description: JumpForward
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_105_105_43_poses':
+    description: JumpSmallForward
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_105_105_44_poses':
+    description: JumpSmallForward
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_105_105_45_poses':
+    description: JumpForward
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_105_105_46_poses':
+    description: Jump Turn
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_105_105_47_poses':
+    description: Jump Turn
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_105_105_48_poses':
+    description: JumpTurn
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_105_105_50_poses':
+    description: JumpTurn
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_105_105_51_poses':
+    description: FurtherJumpTurn
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_105_105_52_poses':
+    description: SmallJumpTurn
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_105_105_57_poses':
+    description: WalkForward
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_105_105_62_poses':
+    description: walkFigure8
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_10_10_04_poses':
+    description: walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_111_111_01_poses':
+    description: Walk backwards
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_111_111_03_poses':
+    description: Crawling
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_111_111_05_poses':
+    description: Dance
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_111_111_19_poses':
+    description: Punch Kick
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_111_111_23_poses':
+    description: Run
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_111_111_24_poses':
+    description: Run
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_111_111_26_poses':
+    description: Walk sideways
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_111_111_33_poses':
+    description: Throwing
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_111_111_34_poses':
+    description: Walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_111_111_35_poses':
+    description: Walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_111_111_36_poses':
+    description: Walk and carry
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_111_111_37_poses':
+    description: Wave
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_113_113_01_poses':
+    description: Walk backwards
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_113_113_04_poses':
+    description: Dance
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_113_113_05_poses':
+    description: Walk digital 8
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_113_113_06_poses':
+    description: Walk figure 8
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_113_113_07_poses':
+    description: Run
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_113_113_10_poses':
+    description: Walk, mope around
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_113_113_13_poses':
+    description: Punch and kick
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_113_113_17_poses':
+    description: Walk sideway
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_113_113_18_poses':
+    description: Walk sideways
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_113_113_24_poses':
+    description: Throw
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_113_113_25_poses':
+    description: Walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_113_113_26_poses':
+    description: Walk and carry
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_113_113_27_poses':
+    description: Wave
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_114_114_13_poses':
+    description: Walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_114_114_14_poses':
+    description: Walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_114_114_15_poses':
+    description: Walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_118_118_01_poses':
+    description: Jump
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_118_118_02_poses':
+    description: Jump
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_118_118_03_poses':
+    description: Jump
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_118_118_04_poses':
+    description: Jump
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_118_118_05_poses':
+    description: Jump
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_118_118_06_poses':
+    description: Jump
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_118_118_07_poses':
+    description: Jump
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_118_118_08_poses':
+    description: Jump
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_118_118_09_poses':
+    description: Jump
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_118_118_10_poses':
+    description: Jump
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_118_118_11_poses':
+    description: Jump
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_118_118_12_poses':
+    description: Jump
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_118_118_13_poses':
+    description: Jump
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_118_118_14_poses':
+    description: Jump
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_118_118_15_poses':
+    description: Jump
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_118_118_16_poses':
+    description: Jump
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_118_118_17_poses':
+    description: Jump
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_118_118_18_poses':
+    description: Jump
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_118_118_19_poses':
+    description: Jump
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_118_118_20_poses':
+    description: Jump
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_118_118_21_poses':
+    description: Jump
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_118_118_22_poses':
+    description: Jump
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_118_118_23_poses':
+    description: Jump
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_118_118_24_poses':
+    description: Jump
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_118_118_25_poses':
+    description: Jump
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_118_118_26_poses':
+    description: Jump
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_118_118_27_poses':
+    description: Jump
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_118_118_28_poses':
+    description: Jump
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_118_118_29_poses':
+    description: Jump
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_118_118_30_poses':
+    description: Jump
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_120_120_05_poses':
+    description: Mickey Dance
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_120_120_06_poses':
+    description: Mickey Dance
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_120_120_07_poses':
+    description: Mickey Dance
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_120_120_08_poses':
+    description: Mickey sneaky walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_120_120_09_poses':
+    description: Mickey sneaking walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_120_120_11_poses':
+    description: Mickey sneaking walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_120_120_12_poses':
+    description: Mickey sneaking walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_120_120_13_poses':
+    description: Mickey sneaking walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_120_120_18_poses':
+    description: Mickey Walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_120_120_19_poses':
+    description: Walk slow
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_120_120_20_poses':
+    description: Walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_124_124_03_poses':
+    description: Basketball Shoot
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_124_124_04_poses':
+    description: Basketball Free Throw
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_124_124_06_poses':
+    description: Basketball Lay Up
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_124_124_11_poses':
+    description: 2 Foot Jump
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_127_127_03_poses':
+    description: Run
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_127_127_04_poses':
+    description: Walk to Run
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_127_127_05_poses':
+    description: Run to Quick Stop
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_127_127_06_poses':
+    description: Run
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_127_127_07_poses':
+    description: Run
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_127_127_08_poses':
+    description: Run
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_127_127_09_poses':
+    description: Run Right
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_127_127_10_poses':
+    description: Run Right
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_127_127_11_poses':
+    description: Run Left
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_127_127_12_poses':
+    description: Run Left
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_127_127_13_poses':
+    description: Run Side Step Left
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_127_127_14_poses':
+    description: Run Side Step Right
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_127_127_15_poses':
+    description: Run Turn Left
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_127_127_16_poses':
+    description: Run Turn Right
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_127_127_17_poses':
+    description: Run Stop Run
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_127_127_18_poses':
+    description: Run Stop Run
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_127_127_19_poses':
+    description: Run Quick Stop Run
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_127_127_20_poses':
+    description: Run Quick Stop Run
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_127_127_21_poses':
+    description: Run Jump Stop Run
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_127_127_22_poses':
+    description: Run Jump Stop Run
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_127_127_23_poses':
+    description: Run Dive Over Roll Run
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_127_127_24_poses':
+    description: Run Dive Over Roll Run
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_127_127_25_poses':
+    description: Run Jump Over
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_127_127_26_poses':
+    description: Run Jump Over
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_127_127_28_poses':
+    description: Run Jump Over
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_127_127_29_poses':
+    description: Run Duck Underneath
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_127_127_30_poses':
+    description: Run Duck Underneath
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_127_127_31_poses':
+    description: Run Duck Underneath
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_127_127_33_poses':
+    description: Run Over
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_127_127_34_poses':
+    description: Run Over
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_127_127_35_poses':
+    description: Run Over
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_127_127_36_poses':
+    description: Run Over
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_127_127_37_poses':
+    description: Run Duck Underneath
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_127_127_38_poses':
+    description: Run Duck Underneath
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_128_128_02_poses':
+    description: Run Left
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_128_128_03_poses':
+    description: Run Right
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_128_128_04_poses':
+    description: Run Duck Underneath
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_128_128_05_poses':
+    description: Run Stop Run
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_128_128_06_poses':
+    description: Run Stop Run
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_128_128_07_poses':
+    description: Run Stop Run
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_128_128_08_poses':
+    description: Run Stop Run
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_128_128_09_poses':
+    description: Run Roll Underneath
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_128_128_10_poses':
+    description: Run Dive Over Roll Run
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_128_128_11_poses':
+    description: Run Dive Over Roll Run
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_12_12_01_poses':
+    description: walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_12_12_02_poses':
+    description: walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_12_12_03_poses':
+    description: walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_131_131_01_poses':
+    description: Start Walk Stop
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_131_131_02_poses':
+    description: Start Walk Stop
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_131_131_07_poses':
+    description: Jump Stop
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_131_131_08_poses':
+    description: Jump Stop
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_131_131_09_poses':
+    description: Start Walk Left
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_131_131_10_poses':
+    description: Start Walk Left
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_131_131_11_poses':
+    description: Start Walk Left
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_131_131_12_poses':
+    description: Start Walk Right
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_131_131_13_poses':
+    description: Start Walk Right
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_131_131_14_poses':
+    description: Start Walk Right
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_132_132_01_poses':
+    description: Walk With Arms Out,  balancing
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_132_132_02_poses':
+    description: Walk With Arms Out,  balancing
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_132_132_03_poses':
+    description: Walk With Arms Out,  balancing
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_132_132_04_poses':
+    description: Walk With Arms Out,  balancing
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_132_132_05_poses':
+    description: Walk With Arms Out,  balancing
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_132_132_06_poses':
+    description: Walk With Arms Out,  balancing
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_132_132_07_poses':
+    description: Walk With Arms Out,  balancing
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_132_132_08_poses':
+    description: Walk With Arms Out,  balancing
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_132_132_09_poses':
+    description: Walk With Arms Out,  balancing
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_132_132_10_poses':
+    description: Walk With Arms Out,  balancing
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_132_132_11_poses':
+    description: Walk With Arms Out,  balancing
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_132_132_12_poses':
+    description: Walk With Arms Out,  balancing
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_132_132_15_poses':
+    description: Walk With Knees Bent
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_132_132_17_poses':
+    description: Walk Fast
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_132_132_18_poses':
+    description: Walk Fast
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_132_132_19_poses':
+    description: Walk Fast
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_132_132_20_poses':
+    description: Walk Fast
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_132_132_21_poses':
+    description: Walk Fast
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_132_132_22_poses':
+    description: Walk Fast
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_132_132_29_poses':
+    description: Bouncy Walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_132_132_30_poses':
+    description: Bouncy Walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_132_132_31_poses':
+    description: Bouncy Walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_132_132_32_poses':
+    description: Bouncy Walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_132_132_33_poses':
+    description: Bouncy Walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_132_132_34_poses':
+    description: Bouncy Walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_132_132_35_poses':
+    description: Walk Leaning To The Right
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_132_132_36_poses':
+    description: Walk Leaning To The Right
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_132_132_39_poses':
+    description: Pigeon Toed Walking
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_132_132_40_poses':
+    description: Walk With Stiff Arms
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_132_132_41_poses':
+    description: Walk With Stiff Arms
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_132_132_42_poses':
+    description: Walk Swinging Shoulders
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_132_132_43_poses':
+    description: Walk Swinging Shoulders
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_132_132_44_poses':
+    description: Walk Swinging Shoulders
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_132_132_45_poses':
+    description: Walk Slow
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_132_132_46_poses':
+    description: Walk Slow
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_132_132_47_poses':
+    description: Walk Slow
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_132_132_48_poses':
+    description: Walk Slow
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_132_132_50_poses':
+    description: Walk Slow
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_132_132_53_poses':
+    description: Walk With Legs Apart
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_132_132_54_poses':
+    description: Walk With Wild Arms
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_132_132_55_poses':
+    description: Walk With Wild Legs
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_133_133_01_poses':
+    description: Walk Crawl
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_133_133_02_poses':
+    description: Walk Crawl
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_133_133_03_poses':
+    description: Walk Jump
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_133_133_04_poses':
+    description: Walk Jump
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_133_133_05_poses':
+    description: Walk Jump
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_133_133_06_poses':
+    description: Walk Jump
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_133_133_07_poses':
+    description: Walk Jump
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_133_133_08_poses':
+    description: Stretch Walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_133_133_09_poses':
+    description: Stretch Walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_133_133_10_poses':
+    description: Stretch Walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_133_133_11_poses':
+    description: Walk Stop Walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_133_133_12_poses':
+    description: Walk Stop Walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_133_133_13_poses':
+    description: Walk Stop Walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_133_133_14_poses':
+    description: Walk Left
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_133_133_15_poses':
+    description: Walk Left
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_133_133_16_poses':
+    description: Walk Left
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_133_133_17_poses':
+    description: Walk Right
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_133_133_18_poses':
+    description: Walk Right
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_133_133_19_poses':
+    description: Walk Right
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_133_133_20_poses':
+    description: Walk Right
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_133_133_21_poses':
+    description: Walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_133_133_22_poses':
+    description: Walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_133_133_23_poses':
+    description: Walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_133_133_24_poses':
+    description: Walk ZigZag
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_135_135_07_poses':
+    description: Mawashigeri
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_136_136_01_poses':
+    description: Walk Bent Forward
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_136_136_02_poses':
+    description: Walk Bent Forward
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_136_136_03_poses':
+    description: Walk Backwards Bent Forward
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_136_136_04_poses':
+    description: Walk Backwards Bent Forward
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_136_136_05_poses':
+    description: Walk on Toes Bent Forward
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_136_136_06_poses':
+    description: Walk on Toes Bent Forward
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_136_136_07_poses':
+    description: Walk Backward on Toes Bent Forward
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_136_136_08_poses':
+    description: Walk Backward on Toes Bent Forward
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_136_136_09_poses':
+    description: Walk Crouched
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_136_136_11_poses':
+    description: Walk Backwards Crouched
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_136_136_13_poses':
+    description: Walk on Toes Crouched
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_136_136_14_poses':
+    description: Walk on Toes Crouched
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_136_136_15_poses':
+    description: Walk Backwards on Toes Crouched
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_136_136_16_poses':
+    description: Walk Backwards on Toes Crouched
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_136_136_17_poses':
+    description: Flamingo, lift legs high
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_136_136_18_poses':
+    description: Flamingo, lift legs high
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_136_136_20_poses':
+    description: Normal Walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_136_136_21_poses':
+    description: Normal Walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_136_136_22_poses':
+    description: Normal Walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_136_136_23_poses':
+    description: Normal Walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_136_136_24_poses':
+    description: Normal Walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_136_136_25_poses':
+    description: Normal Walk Backwards
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_136_136_26_poses':
+    description: Normal Walk Backwards
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_136_136_27_poses':
+    description: Walk on Toes
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_136_136_29_poses':
+    description: Walk Backwards on Toes
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_136_136_30_poses':
+    description: Walk Backwards on Toes
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_137_137_04_poses':
+    description: Cat Walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_137_137_08_poses':
+    description: Chicken Walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_137_137_12_poses':
+    description: Dinosaur Walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_137_137_13_poses':
+    description: Drunk Coffee Mug
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_137_137_14_poses':
+    description: Drunk Pick Up
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_137_137_15_poses':
+    description: Drunk Wait
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_137_137_16_poses':
+    description: Drunk Walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_137_137_20_poses':
+    description: Gangly Teen Walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_137_137_24_poses':
+    description: Graceful Lady Walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_137_137_29_poses':
+    description: Normal Walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_137_137_33_poses':
+    description: Old Man Walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_137_137_38_poses':
+    description: Sexy Lady Walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_137_137_42_poses':
+    description: Strong Man Walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_139_139_05_poses':
+    description: Pulling a Gun
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_139_139_10_poses':
+    description: Run
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_139_139_11_poses':
+    description: Run To Sneak
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_139_139_12_poses':
+    description: Run in Circles
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_139_139_13_poses':
+    description: Run in Circles
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_139_139_19_poses':
+    description: Walk Wounded Leg
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_139_139_22_poses':
+    description: Walk Wounded Leg
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_139_139_23_poses':
+    description: Walk Wounded Leg
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_139_139_24_poses':
+    description: Walk Wounded Leg
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_139_139_30_poses':
+    description: Walking
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_13_13_07_poses':
+    description: unscrew bottlecap, drink soda
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_13_13_08_poses':
+    description: unscrew bottlecap, drink soda, screw on bottlecap
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_13_13_09_poses':
+    description: drink soda
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_13_13_10_poses':
+    description: jump up to grab, reach for, tiptoe
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_13_13_11_poses':
+    description: forward jump
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_13_13_12_poses':
+    description: jump up to grab, reach for, tiptoe
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_13_13_13_poses':
+    description: forward jump
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_13_13_19_poses':
+    description: forward jump
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_13_13_20_poses':
+    description: wash windows
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_13_13_21_poses':
+    description: wash windows
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_13_13_22_poses':
+    description: wash windows
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_13_13_26_poses':
+    description: direct traffic, wave
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_13_13_27_poses':
+    description: direct traffic, wave, point
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_13_13_28_poses':
+    description: direct traffic, wave, point
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_13_13_29_poses':
+    description: jumping jacks, side twists, bend over, squats
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_13_13_30_poses':
+    description: jumping jacks, side twists, squats, jog
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_13_13_31_poses':
+    description: jumping jacks, side twists, bend over, jog
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_13_13_32_poses':
+    description: forward jump
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_13_13_39_poses':
+    description: jump
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_13_13_40_poses':
+    description: jump
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_13_13_41_poses':
+    description: jump
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_13_13_42_poses':
+    description: jump
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_141_141_01_poses':
+    description: Run
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_141_141_02_poses':
+    description: Run
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_141_141_03_poses':
+    description: Run
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_141_141_04_poses':
+    description: Jump Distances
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_141_141_05_poses':
+    description: Jump Sideways
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_141_141_06_poses':
+    description: Jump Twist
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_141_141_10_poses':
+    description: Toss and Catch
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_141_141_11_poses':
+    description: Throw and Catch
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_141_141_12_poses':
+    description: Dance, Twist
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_141_141_14_poses':
+    description: Punch and Kick
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_141_141_16_poses':
+    description: Wave Hello
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_141_141_19_poses':
+    description: Walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_141_141_22_poses':
+    description: High Five
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_141_141_24_poses':
+    description: Around the world High Five Low
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_141_141_25_poses':
+    description: Walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_141_141_28_poses':
+    description: Slap Hands, Throw it Back
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_141_141_29_poses':
+    description: Random Walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_141_141_30_poses':
+    description: Random Walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_141_141_31_poses':
+    description: Walk Backwards
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_141_141_32_poses':
+    description: Walk Sideways, Cross Legs
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_141_141_33_poses':
+    description: Walk Sideways, Foot to Foot
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_141_141_34_poses':
+    description: Run
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_142_142_20_poses':
+    description: Singing in the rain jump
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_142_142_21_poses':
+    description: Singing in the rain jump
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_143_143_01_poses':
+    description: Run
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_143_143_02_poses':
+    description: Run to Stop
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_143_143_03_poses':
+    description: Start to Run
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_143_143_04_poses':
+    description: Run Figure 8
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_143_143_05_poses':
+    description: Jumping Distances
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_143_143_06_poses':
+    description: Jumping Heights
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_143_143_07_poses':
+    description: Jumping Sideways
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_143_143_08_poses':
+    description: Jumping Twists
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_143_143_09_poses':
+    description: Jumping Twists
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_143_143_13_poses':
+    description: Walk and Pick up Laundry Basket
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_143_143_14_poses':
+    description: Walk And Step Over
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_143_143_15_poses':
+    description: Walk And Step Over
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_143_143_16_poses':
+    description: Walk And Step Over
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_143_143_20_poses':
+    description: Catch And Throw
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_143_143_22_poses':
+    description: Catch And Throw Football
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_143_143_23_poses':
+    description: Punching
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_143_143_26_poses':
+    description: Washing Window
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_143_143_27_poses':
+    description: Washing Window
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_143_143_28_poses':
+    description: Sweeping, Push Broom
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_143_143_32_poses':
+    description: Walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_143_143_34_poses':
+    description: Chicken Dance
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_143_143_35_poses':
+    description: Macarena Dance
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_143_143_38_poses':
+    description: Walk Digital 8
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_143_143_39_poses':
+    description: Walk Backwards
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_143_143_40_poses':
+    description: Walk Sideways
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_143_143_42_poses':
+    description: Run
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_144_144_13_poses':
+    description: Left_Punch_Sequence001
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_144_144_14_poses':
+    description: Left_Punch_Sequence002
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_144_144_20_poses':
+    description: Punch_Sequence
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_144_144_21_poses':
+    description: Punch_Sequence001
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_144_144_34_poses':
+    description: Walking001
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_15_15_01_poses':
+    description: walk, wander
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_15_15_03_poses':
+    description: walk, wander
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_15_15_08_poses':
+    description: hand signals - horizontally revolve forearms
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_15_15_09_poses':
+    description: walk, wander
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_15_15_11_poses':
+    description: wash windows, paint figure eights; hand signals
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_15_15_12_poses':
+    description: wash windows; basketball - dribble, lay-up shot, pass; throw ball;
+      dance - Egyptian walk, the Dive, the Twist; strew
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_15_15_14_poses':
+    description: walk, wander
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_16_16_34_poses':
+    description: slow walk, stop
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_16_16_35_poses':
+    description: run, jog
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_17_17_01_poses':
+    description: walk with anger, frustration
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_17_17_03_poses':
+    description: walk stealthily
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_17_17_04_poses':
+    description: walk stealthily
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_17_17_05_poses':
+    description: walk, hobble
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_17_17_06_poses':
+    description: whistle, walk jauntily
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_17_17_07_poses':
+    description: whistle, walk jauntily
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_17_17_08_poses':
+    description: muscular, heavyset person's walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_17_17_09_poses':
+    description: muscular, heavyset person's walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_26_26_01_poses':
+    description: walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_26_26_02_poses':
+    description: basketball signals
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_26_26_10_poses':
+    description: bend, lift
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_27_27_01_poses':
+    description: walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_27_27_02_poses':
+    description: basketball signals
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_27_27_06_poses':
+    description: basketball signals
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_28_28_01_poses':
+    description: basketball signals
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_28_28_05_poses':
+    description: basketball signals
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_29_29_01_poses':
+    description: walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_29_29_02_poses':
+    description: basketball signals
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_29_29_07_poses':
+    description: basketball signals
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_30_30_01_poses':
+    description: basketball signals
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_30_30_07_poses':
+    description: basketball signals
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_31_31_01_poses':
+    description: basketball signals
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_31_31_05_poses':
+    description: basketball signals
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_32_32_01_poses':
+    description: walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_32_32_02_poses':
+    description: walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_32_32_03_poses':
+    description: basketball signals
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_32_32_07_poses':
+    description: basketball signals
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_35_35_01_poses':
+    description: walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_35_35_02_poses':
+    description: walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_35_35_03_poses':
+    description: walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_35_35_04_poses':
+    description: walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_35_35_05_poses':
+    description: walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_35_35_06_poses':
+    description: walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_35_35_07_poses':
+    description: walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_35_35_08_poses':
+    description: walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_35_35_09_poses':
+    description: walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_35_35_10_poses':
+    description: walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_35_35_11_poses':
+    description: walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_35_35_12_poses':
+    description: walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_35_35_13_poses':
+    description: walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_35_35_14_poses':
+    description: walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_35_35_15_poses':
+    description: walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_35_35_16_poses':
+    description: walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_35_35_17_poses':
+    description: run, jog
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_35_35_18_poses':
+    description: run, jog
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_35_35_19_poses':
+    description: run, jog
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_35_35_20_poses':
+    description: run, jog
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_35_35_21_poses':
+    description: run, jog
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_35_35_22_poses':
+    description: run, jog
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_35_35_23_poses':
+    description: run, jog
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_35_35_24_poses':
+    description: run, jog
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_35_35_25_poses':
+    description: run, jog
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_35_35_26_poses':
+    description: run, jog
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_35_35_27_poses':
+    description: navigate around obstacles
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_35_35_28_poses':
+    description: walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_35_35_29_poses':
+    description: walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_35_35_30_poses':
+    description: walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_35_35_31_poses':
+    description: walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_35_35_32_poses':
+    description: walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_35_35_33_poses':
+    description: walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_35_35_34_poses':
+    description: walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_36_36_02_poses':
+    description: walk forward, turn around, walk back
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_36_36_03_poses':
+    description: walk forward, turn around, walk back
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_36_36_09_poses':
+    description: walk forward, turn around, walk back
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_37_37_01_poses':
+    description: slow walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_38_38_01_poses':
+    description: walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_38_38_02_poses':
+    description: walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_38_38_03_poses':
+    description: run around in a circle
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_38_38_04_poses':
+    description: walk around, frequent turns, cyclic walk along a line
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_39_39_01_poses':
+    description: walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_39_39_02_poses':
+    description: walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_39_39_03_poses':
+    description: walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_39_39_04_poses':
+    description: walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_39_39_05_poses':
+    description: walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_39_39_06_poses':
+    description: walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_39_39_07_poses':
+    description: walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_39_39_08_poses':
+    description: walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_39_39_09_poses':
+    description: walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_39_39_10_poses':
+    description: walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_39_39_11_poses':
+    description: walk forward, turn around, walk back
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_39_39_12_poses':
+    description: walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_39_39_13_poses':
+    description: walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_39_39_14_poses':
+    description: walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_40_40_02_poses':
+    description: navigate - walk forward, backward, on a diagonal
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_40_40_03_poses':
+    description: navigate - walk forward, backward, on a diagonal
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_40_40_04_poses':
+    description: navigate - walk forward, backward, on a diagonal
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_40_40_05_poses':
+    description: navigate - walk forward, backward, on a diagonal
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_40_40_12_poses':
+    description: basketball signals
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_41_41_02_poses':
+    description: navigate - walk forward, backward, sideways, on a diagonal
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_41_41_03_poses':
+    description: navigate - walk forward, backward, sideways, on a diagonal
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_41_41_04_poses':
+    description: navigate - walk forward, backward, on a diagonal
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_41_41_05_poses':
+    description: navigate - walk forward, backward, on a diagonal
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_41_41_06_poses':
+    description: navigate - walk forward, backward, on a diagonal
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_41_41_10_poses':
+    description: basketball signals
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_41_41_11_poses':
+    description: basketball signals
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_43_43_01_poses':
+    description: walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_45_45_01_poses':
+    description: walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_46_46_01_poses':
+    description: walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_47_47_01_poses':
+    description: walk forward, turn around, walk back
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_49_49_01_poses':
+    description: walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_49_49_02_poses':
+    description: jump up and down, hop on one foot
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_49_49_03_poses':
+    description: jump up and down, hop on one foot
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_49_49_04_poses':
+    description: run, leap
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_49_49_05_poses':
+    description: run, leap
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_49_49_09_poses':
+    description: dance - arms held high, side arabesque
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_49_49_10_poses':
+    description: dance - fold in from side arabesque, curl inwards
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_49_49_11_poses':
+    description: dance - fold in from side arabesque, curl inwards
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_49_49_12_poses':
+    description: dance - lean forward, bring back leg forward, arching arms
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_49_49_13_poses':
+    description: dance - fold in from side arabesque, curl inwards
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_49_49_14_poses':
+    description: dance - lean forward, bring back leg forward, arching arms
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_49_49_15_poses':
+    description: static dance pose - folded in, head lowered, leg bent
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_49_49_16_poses':
+    description: dance - fold in from side arabesque, curl inwards
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_49_49_17_poses':
+    description: dance - lean forward, bring back leg forward, arching arms
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_49_49_18_poses':
+    description: balance on one leg, outstretched arms
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_49_49_19_poses':
+    description: balance on one leg, outstretched arms
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_49_49_20_poses':
+    description: balance on one leg, outstretched arms
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_49_49_22_poses':
+    description: dance - lean back on bent leg, balance, bend elbow by ear
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_54_54_08_poses':
+    description: roadrunner (human subject)
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_54_54_20_poses':
+    description: follow path, walk around obstacles
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_54_54_21_poses':
+    description: follow path, walk around obstacles
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_54_54_22_poses':
+    description: follow path, walk around obstacles
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_55_55_01_poses':
+    description: dance, whirl
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_55_55_02_poses':
+    description: lambada dance
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_55_55_04_poses':
+    description: walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_55_55_15_poses':
+    description: roadrunner (human subject)
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_56_56_01_poses':
+    description: walk around
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_56_56_03_poses':
+    description: vignettes - fists up, wipe window, yawn, stretch, angrily grab, smash
+      against wall, lift open window, throw punches, skip
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_56_56_04_poses':
+    description: vignettes - fists up, wipe window, grab, lift open window, throw
+      punches, yawn, stretch, walk, jump
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_56_56_05_poses':
+    description: vignettes - walk, drink water, run, jog, jump, wipe window, lift
+      open window, throw punches, yawn, stretch
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_56_56_06_poses':
+    description: vignettes - throw punches, grab, skip, yawn, stretch, leap, lift
+      open window, walk, jump, bound
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_56_56_07_poses':
+    description: vignettes - yawn, stretch, walk, run, jog, angrily grab, jump, skip,
+      halt
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_56_56_08_poses':
+    description: vignettes - lift open window, smash against wall, hop, walk, run,
+      jog, yawn, stretch
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_60_60_01_poses':
+    description: salsa dance
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_60_60_02_poses':
+    description: salsa dance
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_60_60_03_poses':
+    description: salsa dance
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_60_60_04_poses':
+    description: salsa dance
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_60_60_05_poses':
+    description: salsa dance
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_60_60_06_poses':
+    description: salsa dance
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_60_60_08_poses':
+    description: salsa dance
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_60_60_09_poses':
+    description: salsa dance
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_60_60_10_poses':
+    description: salsa dance
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_60_60_11_poses':
+    description: salsa dance
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_60_60_12_poses':
+    description: salsa dance
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_60_60_13_poses':
+    description: salsa dance
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_60_60_14_poses':
+    description: salsa dance
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_60_60_15_poses':
+    description: salsa dance
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_61_61_01_poses':
+    description: salsa dance
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_61_61_02_poses':
+    description: salsa dance
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_61_61_03_poses':
+    description: salsa dance
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_61_61_04_poses':
+    description: salsa dance
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_61_61_09_poses':
+    description: salsa dance
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_61_61_10_poses':
+    description: salsa dance
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_61_61_12_poses':
+    description: salsa dance
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_61_61_15_poses':
+    description: salsa dance
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_62_62_09_poses':
+    description: pulling a nail
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_62_62_12_poses':
+    description: hard days drink
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_74_74_01_poses':
+    description: stiff walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_74_74_02_poses':
+    description: stiff walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_74_74_20_poses':
+    description: stiff walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_75_75_01_poses':
+    description: run jump
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_75_75_02_poses':
+    description: run jump
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_75_75_03_poses':
+    description: run jump
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_75_75_04_poses':
+    description: wide leg run
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_75_75_05_poses':
+    description: cross leg run
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_75_75_06_poses':
+    description: 180 jump
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_75_75_07_poses':
+    description: angle jumps
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_75_75_08_poses':
+    description: 360 jumps
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_75_75_09_poses':
+    description: 360 jump
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_75_75_11_poses':
+    description: 2 jump
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_75_75_15_poses':
+    description: long jumps
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_75_75_16_poses':
+    description: jump kick
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_76_76_01_poses':
+    description: walk backwards then attack with a punch
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_76_76_02_poses':
+    description: walk backwards, feign a few attacks, then attack
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_76_76_09_poses':
+    description: walking backwards
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_77_77_10_poses':
+    description: careful run
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_77_77_11_poses':
+    description: careful run
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_77_77_12_poses':
+    description: careful run in circle
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_77_77_13_poses':
+    description: careful run in figure eight
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_77_77_19_poses':
+    description: limping, hurt right leg
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_77_77_20_poses':
+    description: limping, hurt right leg
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_77_77_22_poses':
+    description: limping, hurt right leg
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_77_77_23_poses':
+    description: limping, hurt right leg
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_77_77_24_poses':
+    description: limping, hurt right leg
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_77_77_25_poses':
+    description: careful walk and search
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_77_77_26_poses':
+    description: careful walk and search
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_77_77_27_poses':
+    description: careful walk and search
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_77_77_28_poses':
+    description: careful walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_77_77_29_poses':
+    description: creeping walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_77_77_30_poses':
+    description: creeping walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_77_77_31_poses':
+    description: silent walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_77_77_32_poses':
+    description: creeping walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_79_79_21_poses':
+    description: putting on a pull over
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_79_79_30_poses':
+    description: pushing a swing
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_79_79_33_poses':
+    description: chug a beer
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_79_79_38_poses':
+    description: drinking water
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_79_79_40_poses':
+    description: drinking a soda
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_79_79_44_poses':
+    description: washing a window
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_79_79_90_poses':
+    description: washing
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_80_80_19_poses':
+    description: pushing broom
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_80_80_21_poses':
+    description: pushing swing
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_80_80_28_poses':
+    description: drinking and smoking
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_80_80_29_poses':
+    description: chugging
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_80_80_40_poses':
+    description: drinking from bottle
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_82_82_08_poses':
+    description: stand still; casual walk forward
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_82_82_09_poses':
+    description: confident walk forward
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_82_82_10_poses':
+    description: sad walk forward
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_82_82_11_poses':
+    description: normal walk forward
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_82_82_12_poses':
+    description: happy or fast walk forward
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_82_82_13_poses':
+    description: normal walk forward
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_82_82_14_poses':
+    description: walk forward and slow down
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_82_82_15_poses':
+    description: walk forward and turn sideways
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_83_83_36_poses':
+    description: walk forward turn 90 degrees left walk forward
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_83_83_37_poses':
+    description: walk forward turn 90 degrees right walk forward
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_83_83_38_poses':
+    description: walk forward turn 90 degrees left walk forward
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_83_83_39_poses':
+    description: walk forward turn 90 degrees right walk forward
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_83_83_42_poses':
+    description: long jump forward
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_83_83_43_poses':
+    description: long jump forward
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_83_83_47_poses':
+    description: long jump forward
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_83_83_50_poses':
+    description: long jump forward
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_85_85_01_poses':
+    description: JumpTwist
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_85_85_02_poses':
+    description: JumpTwist
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_86_86_01_poses':
+    description: jumps kicks and punches
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_86_86_02_poses':
+    description: walk, squats, run, stretch, jumps, punches, and drinking
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_86_86_03_poses':
+    description: walking, running, jumping, kicking, and stretching
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_86_86_04_poses':
+    description: walking, stretching, punching, chopping, and drinking
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_86_86_05_poses':
+    description: walking, jumping, jumping jacks,  jumping on one foot, punching,
+      chopping,
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_86_86_06_poses':
+    description: walking, running, kicking, punching, knee kicking, and stretching
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_86_86_07_poses':
+    description: walking, swinging arms, stretching, jumping on one leg, and jumping
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_86_86_08_poses':
+    description: walking, squats, stretching, kicking, and punching
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_86_86_11_poses':
+    description: walking, stretching, walking and turning
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_86_86_12_poses':
+    description: walking, dragging, sweeping, dustpan, wipe window, and wipe mirror
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_86_86_14_poses':
+    description: bouncing basketball, shooting basketball, dribble basketball, two
+      handed dribble
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_87_87_01_poses':
+    description: Jump with kick and spin
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_88_88_06_poses':
+    description: jump and spin kick
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_88_88_11_poses':
+    description: stretches and jumps
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_89_89_01_poses':
+    description: balance object on forehead
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_90_90_05_poses':
+    description: jump kick
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_90_90_06_poses':
+    description: jump kick
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_90_90_07_poses':
+    description: jump kick
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_90_90_22_poses':
+    description: straight walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_90_90_23_poses':
+    description: straight walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_90_90_28_poses':
+    description: breakdance
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_90_90_30_poses':
+    description: russian dance
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_90_90_31_poses':
+    description: russian dance
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_90_90_32_poses':
+    description: moonwalk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_90_90_33_poses':
+    description: arm up wide leg roll
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_90_90_34_poses':
+    description: wide leg roll
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_90_90_35_poses':
+    description: wide leg roll
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_90_90_36_poses':
+    description: wide leg roll
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_91_91_01_poses':
+    description: Walk digital figure eight
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_91_91_02_poses':
+    description: WalkStraight
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_91_91_03_poses':
+    description: Walk figure eight
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_91_91_04_poses':
+    description: Walking
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_91_91_05_poses':
+    description: Mummy Walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_91_91_09_poses':
+    description: DrunkWalk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_91_91_10_poses':
+    description: SlowWalk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_91_91_11_poses':
+    description: LavishWalk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_91_91_12_poses':
+    description: TooCoolWalk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_91_91_13_poses':
+    description: SadWalk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_91_91_14_poses':
+    description: DepressedWalk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_91_91_15_poses':
+    description: ClumsyWalk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_91_91_17_poses':
+    description: QuickWalk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_91_91_18_poses':
+    description: CarefulWalk LookingAround
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_91_91_20_poses':
+    description: ShyWalk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_91_91_21_poses':
+    description: acheyWalk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_91_91_22_poses':
+    description: CasualQuickWalk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_91_91_23_poses':
+    description: CoolWalk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_91_91_24_poses':
+    description: HurtLegWalk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_91_91_25_poses':
+    description: DragBadLegWalk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_91_91_26_poses':
+    description: HurtStomachWalk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_91_91_27_poses':
+    description: SlowWalk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_91_91_28_poses':
+    description: GhettoWalk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_91_91_29_poses':
+    description: NormalWalk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_91_91_30_poses':
+    description: SexyWalk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_91_91_31_poses':
+    description: NormalWalk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_91_91_32_poses':
+    description: ScaredWalk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_91_91_33_poses':
+    description: MachoWalk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_91_91_34_poses':
+    description: NormalWalk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_91_91_35_poses':
+    description: TrafficWalk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_91_91_36_poses':
+    description: WalkStraight
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_91_91_39_poses':
+    description: JumpForward
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_91_91_40_poses':
+    description: JumpForward
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_91_91_41_poses':
+    description: JumpForward
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_91_91_42_poses':
+    description: JumpForward
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_91_91_43_poses':
+    description: JumpSmallForward
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_91_91_44_poses':
+    description: JumpSmallForward
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_91_91_45_poses':
+    description: JumpForward
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_91_91_46_poses':
+    description: Jump Turn
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_91_91_47_poses':
+    description: Jump Turn
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_91_91_48_poses':
+    description: JumpTurn
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_91_91_50_poses':
+    description: JumpTurn
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_91_91_51_poses':
+    description: FurtherJumpTurn
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_91_91_52_poses':
+    description: SmallJumpTurn
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_91_91_53_poses':
+    description: 180 degree jump
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_91_91_57_poses':
+    description: WalkForward
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_91_91_62_poses':
+    description: walkFigure8
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
+  '0-CMU_93_93_07_poses':
+    description: Casual Walk
+    difficulty: 4
+    trim_beg: -1
+    trim_end: -1
+    weight: 1.0
