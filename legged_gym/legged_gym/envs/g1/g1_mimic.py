@@ -467,12 +467,18 @@ class G1Mimic(LeggedRobot):
     
     def update_demo_obs(self):
         demo_motion_times = self._motion_demo_offsets + self._motion_times[:, None]  # [num_envs, demo_dim]
-        print(demo_motion_times)
+        # print(demo_motion_times)
         root_pos, root_rot, dof_pos, root_vel, root_ang_vel, dof_vel, key_pos, local_key_body_pos \
             = self._motion_lib.get_motion_state(self._motion_ids.repeat_interleave(self._motion_num_future_steps), demo_motion_times.flatten(), get_lbp=True)
         dof_pos, dof_vel = self.reindex_dof_pos_vel(dof_pos, dof_vel)
 
+
+        ## INPUT YANG
         # root_vel[:,[0,1,2]] = torch.tensor([0.,-5.,0.]).to('cuda:0')
+        # dof_pos = 
+        ## INPUT YANG
+
+
         # print(root_vel, root_vel.shape)
 
         
@@ -494,8 +500,8 @@ class G1Mimic(LeggedRobot):
     
     def compute_obs_buf(self):
         imu_obs = torch.stack((self.roll, self.pitch), dim=1)
-        print()
-        print("!!!!!!!!!")
+        # print()
+        # print("!!!!!!!!!")
         # print("omega", self.base_ang_vel  * self.obs_scales.ang_vel)
         # print("[roll_x, pitch_y]", imu_obs)  # imu_obs
         # print("[sin_yaw, cos_yaw]", torch.sin(self.yaw - self.target_yaw)[:, None],torch.cos(self.yaw - self.target_yaw)[:, None],)  # NEEDS TO BE ADDED
@@ -589,10 +595,10 @@ class G1Mimic(LeggedRobot):
         # print()
         # print()
         # print()
-        priv_explicit = torch.zeros(3).view(1,-1).to(self.device)
+        # priv_explicit = torch.zeros(3).view(1,-1).to(self.device)
 
         
-        priv_latent = torch.zeros(4 + 1 + 2*23)  # for now  # NEEDS TO BE CHANGED OR UNDERSTOOD
+        # priv_latent = torch.zeros(4 + 1 + 2*23)  # for now  # NEEDS TO BE CHANGED OR UNDERSTOOD
         # priv_latent = torch.tensor([ 0.0000e+00,  0.0000e+00,  0.0000e+00,  0.0000e+00,  9.7470e-01,                                                                                
         #                         6.8799e-02, -1.0730e-01,  8.7041e-02, -6.2713e-02,  1.6226e-01,          
         #                         5.8429e-02, -1.6696e-01,  2.8117e-03,  2.7620e-02,  1.5985e-01,          
@@ -1027,8 +1033,8 @@ def build_demo_observations(root_pos, root_rot, root_vel, root_ang_vel, dof_pos,
     # print("root_pos[:, 2:3]", root_pos[:, 2:3]) 
     # print("local_key_body_pos",local_key_body_pos.view(local_key_body_pos.shape[0], -1))
 
-    # return torch.cat((dof_pos, local_root_vel, local_root_ang_vel, roll[:, None], pitch[:, None], root_pos[:, 2:3], torch.zeros_like(local_key_body_pos.view(local_key_body_pos.shape[0], -1))), dim=-1)
-    return torch.cat((dof_pos, local_root_vel, local_root_ang_vel, roll[:, None], pitch[:, None], root_pos[:, 2:3], local_key_body_pos.view(local_key_body_pos.shape[0], -1)), dim=-1)
+    return torch.cat((dof_pos, local_root_vel, local_root_ang_vel, roll[:, None], pitch[:, None], root_pos[:, 2:3], torch.zeros_like(local_key_body_pos.view(local_key_body_pos.shape[0], -1))), dim=-1)
+    # return torch.cat((dof_pos, local_root_vel, local_root_ang_vel, roll[:, None], pitch[:, None], root_pos[:, 2:3], local_key_body_pos.view(local_key_body_pos.shape[0], -1)), dim=-1)
 
 @torch.jit.script
 def reindex_motion_dof(dof, indices_sim, indices_motion, valid_dof_body_ids):
