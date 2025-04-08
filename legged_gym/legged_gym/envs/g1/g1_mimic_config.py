@@ -65,11 +65,16 @@ class G1MimicCfg( LeggedRobotCfg ):
         motion_curriculum = True
         motion_type = "yaml"
         # motion_name = "motions_autogen_all_no_run_jump.yaml"
-        motion_name = "motions_50.yaml"
-        # motion_name = "new_config_g1_ACCAD.yaml"
+        # motion_name = "motions_50.yaml"
+        # motion_name = "motions_50+andre_additions.yaml"
+        # motion_name = "motions_50+curated_additions.yaml"
+        # motion_name = "motions_50+picking.yaml"
+        motion_name = "picking.yaml"
 
-        motion_type = "single"
-        motion_name = "0-ACCAD_Female1General_c3d_A1 - Stand_poses"
+        # motion_type = "single"
+        # motion_name = "0-ACCAD_Female1General_c3d_A1 - Stand_poses"
+        # motion_name = "res_4"
+        # motion_name = "0-CMU_79_79_32_poses"
 
         # motion_name = "res_hi"
         # motion_name = "res_box"
@@ -79,7 +84,6 @@ class G1MimicCfg( LeggedRobotCfg ):
         # motion_name = "res_1"
         # motion_name = "res_2"
         # motion_name = "res_3"
-        # motion_name = "res_4"
         # motion_name = "res_5"
         # motion_name = "res_6"
         
@@ -128,76 +132,59 @@ class G1MimicCfg( LeggedRobotCfg ):
             'right_shoulder_yaw_joint' : 0.,
             'right_elbow_joint' : 0.,  #right_wrist_roll_joint right_wrist_pitch_joint right_wrist_yaw_joint
         }
-        #    'left_hip_yaw_joint' : 0. ,   
-        #    'left_hip_roll_joint' : 0,               
-        #    'left_hip_pitch_joint' : -0.4,         
-        #    'left_knee_joint' : 0.8,       
-        #    'left_ankle_joint' : -0.4,     
-        #    'right_hip_yaw_joint' : 0., 
-        #    'right_hip_roll_joint' : 0, 
-        #    'right_hip_pitch_joint' : -0.4,                                       
-        #    'right_knee_joint' : 0.8,                                             
-        #    'right_ankle_joint' : -0.4,                                     
-        #    'torso_joint' : 0., 
-        #    'left_shoulder_pitch_joint' : 0., 
-        #    'left_shoulder_roll_joint' : 0, 
-        #    'left_shoulder_yaw_joint' : 0.,
-        #    'left_elbow_joint'  : 0.,
-        #    'right_shoulder_pitch_joint' : 0.,
-        #    'right_shoulder_roll_joint' : 0.0,
-        #    'right_shoulder_yaw_joint' : 0.,
-        #    'right_elbow_joint' : 0.,
-        
+
 
     class control( LeggedRobotCfg.control ):
         # PD Drive parameters:
-        control_type = 'P'
-        stiffness = {'hip_yaw': 100,
-                     'hip_roll': 100,
-                     'hip_pitch': 100,
-                     'knee': 150,
-                     'ankle': 40,
-                     'torso': 200,
-                     'shoulder': 40,
-                     "elbow":40,
-                     "waist": 400,
-                     }  # [N*m/rad]
-        damping = {  'hip_yaw': 2,
-                     'hip_roll': 2,
-                     'hip_pitch': 2,
-                     'knee': 4,
-                     'ankle': 2,
-                     'torso': 4,
-                     'shoulder': 2,
-                     "elbow":2,
-                     "waist": 6,
-                     }  # [N*m/rad]  # [N*m*s/rad]        
-
-        # stiffness = {'joint': 100,
-        #              }  # [N*m/rad]
-        # damping = {  'joint': 5,
-        #              }  # [N*m/rad]  # [N*m*s/rad]
-
-        # stiffness = {'hip_yaw': 200,
-        #              'hip_roll': 200,
-        #              'hip_pitch': 200,
-        #              'knee': 200,
+        # control_type = 'P'
+        # stiffness = {'hip_yaw': 100,
+        #              'hip_roll': 100,
+        #              'hip_pitch': 100,
+        #              'knee': 150,
         #              'ankle': 40,
-        #              'torso': 300,
+        #              'torso': 200,
         #              'shoulder': 40,
         #              "elbow":40,
-        #              "waist": 300,
+        #              "waist": 400,
         #              }  # [N*m/rad]
-        # damping = {  'hip_yaw': 5,
-        #              'hip_roll': 5,
-        #              'hip_pitch': 10,
-        #              'knee': 10,
+        # damping = {  'hip_yaw': 2,
+        #              'hip_roll': 2,
+        #              'hip_pitch': 2,
+        #              'knee': 4,
         #              'ankle': 2,
-        #              'torso': 6,
+        #              'torso': 4,
         #              'shoulder': 2,
         #              "elbow":2,
         #              "waist": 6,
-                    #  }  # [N*m/rad]  # [N*m*s/rad]
+        #              }  # [N*m/rad]  # [N*m*s/rad]   
+
+        stiffness = {'hip_yaw': 100,
+                     'hip_roll': 100,
+                     'hip_pitch': 100,
+                     'knee': 200,
+                     'ankle_pitch': 20,
+                     'ankle_roll': 20,
+                     'shoulder_pitch': 90,
+                     'shoulder_roll': 60,
+                     'shoulder_yaw': 20,
+                     "elbow":60,
+                     "waist": 400,
+                     }  # [N*m/rad]
+        damping = {  'hip_yaw': 2.5,
+                     'hip_roll': 2.5,
+                     'hip_pitch': 2.5,
+                     'knee': 5.0,
+                     'ankle_pitch': 0.2,
+                     'ankle_roll': 0.1,
+                     'torso': 4,
+                     'shoulder_pitch': 2.0,
+                     'shoulder_roll': 1.0,
+                     'shoulder_yaw': 0.4,
+                     "elbow":1.0,
+                     "waist": 5.0,
+                     }  # [N*m/rad]  # [N*m*s/rad]   
+
+
         action_scale = 0.25
         decimation = 4
 
@@ -212,15 +199,15 @@ class G1MimicCfg( LeggedRobotCfg ):
         torso_name = "waist_yaw_link"
         foot_name = "ankle_roll"
         # foot_name = "ankle"
-        penalize_contacts_on = ["shoulder", "elbow", "hip"]
+        penalize_contacts_on = ["shoulder", "elbow", "hip", "torso", "waist"]
         # terminate_after_contacts_on = ["torso_link", ]#, "thigh", "calf"]
-        terminate_after_contacts_on = ["waist_yaw_link"]# ["waist_yaw_link", ]#, "thigh", "calf"]
+        terminate_after_contacts_on = []# ["waist_yaw_link"]# ["waist_yaw_link", ]#, "thigh", "calf"]
         self_collisions = 0 # 1 to disable, 0 to enable...bitwise filter
   
     class rewards( LeggedRobotCfg.rewards ):
         class scales:
             # tracking rewards
-            alive = 10  #1 #not in Exbody2
+            alive = 1 #not in Exbody2
             # tracking_demo_goal_vel = 1.0
             # tracking_mul = 6
             tracking_lin_vel = 6
@@ -231,40 +218,40 @@ class G1MimicCfg( LeggedRobotCfg ):
             tracking_demo_yaw = 1
             tracking_demo_roll_pitch = 1
             # orientation = -2  # not in Exbody2
-            tracking_demo_dof_pos = 30
-            # tracking_demo_dof_pos = 30 
+            tracking_demo_dof_pos = 3
             # tracking_demo_dof_vel = 1.0
-            tracking_demo_key_body = 20
-            # tracking_demo_key_body = 20
+            tracking_demo_key_body = 2
             # tracking_demo_height = 1  # useful if want better height tracking
             
             # tracking_demo_lin_vel = 1
             # tracking_demo_ang_vel = 0.5
+
+
             # regularization rewards
-            lin_vel_z = -1.0
-            ang_vel_xy = -0.4 #!
-            # orientation = -1.
-            dof_acc = -9e-7 # -3e-7
-            collision = -10.   # not in Exbody2
+            # lin_vel_z = -1.0
+            # ang_vel_xy = -0.4 #!
+            # orientation = -2.           # not in Exbody2 # projected gravity
+            dof_acc = -3e-7
+            collision = -0.1            # not in Exbody2
             action_rate = -0.1
             # delta_torques = -1.0e-7
             # torques = -1e-5
-            energy =-1e-3
+            # energy =-1e-3
 
-            hip_pos = -2. #-0.2
+            # hip_pos = -0.2              # not in Exbody1
             
-            dof_error = -0.5
+            dof_error = -0.1                     ## dof deviation in  Exbody1
             feet_stumble = -2
             # feet_edge = -1
-            # feet_drag = -0.1  # not in Exbody2
-            dof_pos_limits = -10.0  #!
-            feet_air_time = 50 #10
-            # feet_height = 0#2   # not in Exbody2
-            feet_force = -5e-3
+            # feet_drag = -0.1            # not in Exbody2
+            dof_pos_limits = -10.0              ## dof limit violation in  Exbody1
+            feet_air_time = 10
+            # feet_height = 2.            # not in Exbody2
+            feet_force = -3e-3
 
-            waist_roll_pitch = -50
-            ankle_action = -0.1
-            feet_velocity = -0.1
+            waist_roll_pitch = -0.5 #-0.5      # not in Exbody1
+            ankle_action = -0.1          # not in Exbody1
+            # feet_velocity = -0.1         # not in Exbody1
 
             # fix_legs = 0
 
@@ -275,7 +262,7 @@ class G1MimicCfg( LeggedRobotCfg ):
 
         
     class domain_rand( LeggedRobotCfg.domain_rand ):
-        randomize_gravity = True
+        randomize_gravity = False ###True
         gravity_rand_interval_s = 10
         gravity_range = [-0.1, 0.1]
     

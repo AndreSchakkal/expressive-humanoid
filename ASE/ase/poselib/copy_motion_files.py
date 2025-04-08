@@ -10,9 +10,12 @@ def main():
     # parser.add_argument("config", default="ASE/ase/poselib/data/configs/motions_50.yaml", help="Path to the config.yaml file")
     # parser.add_argument("dest", required=False, default="ASE/ase/poselib/data/configs/motions_50.yaml/50", help="Destination folder where files will be copied")
     args = parser.parse_args()
-    args.config = "data/configs/motions_50.yaml"
-    args.dest = "data/configs/50/"
+    # args.config = "data/configs/motions_50.yaml"
+    # args.dest = "data/configs/50/"
 
+    args.config = "data/configs/motions_50+andre_additions.yaml"
+    args.dest = "data/configs/50+andre_additions/"
+    
     # Load the YAML config file.
     with open(args.config, "r") as f:
         config = yaml.safe_load(f)

@@ -68,8 +68,9 @@ class MotionsCfg( LeggedRobotCfg ):
         motion_name = "motions_50.yaml"
         # motion_name = "new_config_g1_ACCAD.yaml"
 
-        motion_type = "single"
-        motion_name = "0-ACCAD_Female1General_c3d_A1 - Stand_poses"
+        # motion_type = "single"
+        # motion_name = "0-ACCAD_Female1General_c3d_A1 - Stand_poses"
+        # motion_name = "res_4"
 
         # motion_name = "res_hi"
         # motion_name = "res_box"
@@ -79,7 +80,6 @@ class MotionsCfg( LeggedRobotCfg ):
         # motion_name = "res_1"
         # motion_name = "res_2"
         # motion_name = "res_3"
-        # motion_name = "res_4"
         # motion_name = "res_5"
         # motion_name = "res_6"
         

@@ -56,6 +56,18 @@ from .g1.g1_mimic_config import G1MimicCfg, G1MimicCfgPPO, G1MimicDistillCfgPPO
 from .g1.g1_mimic_eval import G1MimicEval
 from .g1.g1_mimic_view_motion import G1MimicViewMotion
 
+from .g1.g1_mimic_priv import G1MimicPriv
+from .g1.g1_mimic_config_priv import G1MimicCfgPriv, G1MimicCfgPPOPriv, G1MimicDistillCfgPPOPriv
+from .g1.g1_mimic_priv2 import G1MimicPriv2
+from .g1.g1_mimic_config_priv2 import G1MimicCfgPriv2, G1MimicCfgPPOPriv2, G1MimicDistillCfgPPOPriv2
+from .g1.g1_mimic_ub import G1MimicUB
+from .g1.g1_mimic_config_ub import G1MimicCfgUB, G1MimicCfgPPOUB, G1MimicDistillCfgPPOUB
+from .g1.g1_mimic_teleop import G1MimicTeleop
+from .g1.g1_mimic_config_teleop import G1MimicCfgTeleop, G1MimicCfgPPOTeleop, G1MimicDistillCfgPPOTeleop
+from .g1.g1_mimic_ub_teleop import G1MimicUBTeleop
+from .g1.g1_mimic_config_ub_teleop import G1MimicCfgUBTeleop, G1MimicCfgUBPPOTeleop, G1MimicUBDistillCfgPPOTeleop
+
+
 import os
 import ipdb
 
@@ -78,7 +90,12 @@ task_registry.register( "h1_mimic_distill", H1MimicDistill, H1MimicCfg(), H1Mimi
 
 
 
-
 task_registry.register( "g1_mimic", G1Mimic, G1MimicCfg(), G1MimicCfgPPO() )
 task_registry.register( "g1_mimic_eval", G1MimicEval, G1MimicCfg(), G1MimicCfgPPO() )
 task_registry.register( "g1_view", G1MimicViewMotion, G1MimicCfg(), G1MimicCfgPPO() )
+
+task_registry.register( "g1_mimic_priv", G1MimicPriv, G1MimicCfgPriv(), G1MimicCfgPPOPriv() )
+task_registry.register( "g1_mimic_priv2", G1MimicPriv2, G1MimicCfgPriv2(), G1MimicCfgPPOPriv2() )
+task_registry.register( "g1_mimic_ub", G1MimicUB, G1MimicCfgUB(), G1MimicCfgPPOUB() )
+task_registry.register( "g1_mimic_teleop", G1MimicTeleop, G1MimicCfgTeleop(), G1MimicCfgPPOTeleop() )
+task_registry.register( "g1_mimic_ub_teleop", G1MimicUBTeleop, G1MimicCfgUBTeleop(), G1MimicCfgUBPPOTeleop() )

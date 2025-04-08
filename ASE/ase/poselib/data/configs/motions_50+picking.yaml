@@ -1,0 +1,368 @@
+motions:
+  root: ../g1_retarget_npy/
+  0-CMU_05_05_01_poses:
+    description: 0-CMU_05_05_01_poses
+    difficulty: 1.0
+    trim_beg: -1
+    trim_end: -1
+    weight: 0.0055555556900799274
+  0-CMU_06_06_03_poses:
+    description: 0-CMU_06_06_03_poses
+    difficulty: 1.0
+    trim_beg: -1
+    trim_end: -1
+    weight: 0.0055555556900799274
+  0-CMU_06_06_04_poses:
+    description: 0-CMU_06_06_04_poses
+    difficulty: 1.0
+    trim_beg: -1
+    trim_end: -1
+    weight: 0.0055555556900799274
+  0-CMU_06_06_05_poses:
+    description: 0-CMU_06_06_05_poses
+    difficulty: 1.0
+    trim_beg: -1
+    trim_end: -1
+    weight: 0.0055555556900799274
+  0-CMU_06_06_08_poses:
+    description: 0-CMU_06_06_08_poses
+    difficulty: 1.0
+    trim_beg: -1
+    trim_end: -1
+    weight: 0.0055555556900799274
+  0-CMU_06_06_09_poses:
+    description: 0-CMU_06_06_09_poses
+    difficulty: 1.0
+    trim_beg: -1
+    trim_end: -1
+    weight: 0.0055555556900799274
+  0-CMU_07_07_02_poses:
+    description: 0-CMU_07_07_02_poses
+    difficulty: 1.0
+    trim_beg: -1
+    trim_end: -1
+    weight: 0.0055555556900799274
+  0-CMU_07_07_04_poses:
+    description: 0-CMU_07_07_04_poses
+    difficulty: 1.0
+    trim_beg: -1
+    trim_end: -1
+    weight: 0.0055555556900799274
+  0-CMU_07_07_10_poses:
+    description: 0-CMU_07_07_10_poses
+    difficulty: 1.0
+    trim_beg: -1
+    trim_end: -1
+    weight: 0.0055555556900799274
+  0-CMU_07_07_12_poses:
+    description: 0-CMU_07_07_12_poses
+    difficulty: 1.0
+    trim_beg: -1
+    trim_end: -1
+    weight: 0.0055555556900799274
+  0-CMU_09_09_02_poses:
+    description: 0-CMU_09_09_02_poses
+    difficulty: 1.0
+    trim_beg: -1
+    trim_end: -1
+    weight: 0.0055555556900799274
+  0-CMU_09_09_12_poses:
+    description: 0-CMU_09_09_12_poses
+    difficulty: 1.0
+    trim_beg: -1
+    trim_end: -1
+    weight: 0.0055555556900799274
+  0-CMU_105_105_07_poses:
+    description: 0-CMU_105_105_07_poses
+    difficulty: 1.0
+    trim_beg: -1
+    trim_end: -1
+    weight: 0.0055555556900799274
+  0-CMU_105_105_08_poses:
+    description: 0-CMU_105_105_08_poses
+    difficulty: 1.0
+    trim_beg: -1
+    trim_end: -1
+    weight: 0.0055555556900799274
+  0-CMU_105_105_10_poses:
+    description: 0-CMU_105_105_10_poses
+    difficulty: 1.0
+    trim_beg: -1
+    trim_end: -1
+    weight: 0.0055555556900799274
+  0-CMU_105_105_13_poses:
+    description: 0-CMU_105_105_13_poses
+    difficulty: 1.0
+    trim_beg: -1
+    trim_end: -1
+    weight: 0.0055555556900799274
+  0-CMU_105_105_14_poses:
+    description: 0-CMU_105_105_14_poses
+    difficulty: 1.0
+    trim_beg: -1
+    trim_end: -1
+    weight: 0.0055555556900799274
+  0-CMU_105_105_19_poses:
+    description: 0-CMU_105_105_19_poses
+    difficulty: 1.0
+    trim_beg: -1
+    trim_end: -1
+    weight: 0.0055555556900799274
+  0-CMU_105_105_20_poses:
+    description: 0-CMU_105_105_20_poses
+    difficulty: 1.0
+    trim_beg: -1
+    trim_end: -1
+    weight: 0.0055555556900799274
+  0-CMU_105_105_21_poses:
+    description: 0-CMU_105_105_21_poses
+    difficulty: 1.0
+    trim_beg: -1
+    trim_end: -1
+    weight: 0.0055555556900799274
+  0-CMU_105_105_22_poses:
+    description: 0-CMU_105_105_22_poses
+    difficulty: 1.0
+    trim_beg: -1
+    trim_end: -1
+    weight: 0.0055555556900799274
+  0-CMU_105_105_24_poses:
+    description: 0-CMU_105_105_24_poses
+    difficulty: 1.0
+    trim_beg: -1
+    trim_end: -1
+    weight: 0.0055555556900799274
+  0-CMU_105_105_28_poses:
+    description: 0-CMU_105_105_28_poses
+    difficulty: 1.0
+    trim_beg: -1
+    trim_end: -1
+    weight: 0.0055555556900799274
+  0-CMU_105_105_30_poses:
+    description: 0-CMU_105_105_30_poses
+    difficulty: 1.0
+    trim_beg: -1
+    trim_end: -1
+    weight: 0.0055555556900799274
+  0-CMU_105_105_31_poses:
+    description: 0-CMU_105_105_31_poses
+    difficulty: 1.0
+    trim_beg: -1
+    trim_end: -1
+    weight: 0.0055555556900799274
+  0-CMU_106_106_13_poses:
+    description: 0-CMU_106_106_13_poses
+    difficulty: 1.0
+    trim_beg: -1
+    trim_end: -1
+    weight: 0.0055555556900799274
+  0-CMU_106_106_16_poses:
+    description: 0-CMU_106_106_16_poses
+    difficulty: 1.0
+    trim_beg: -1
+    trim_end: -1
+    weight: 0.0055555556900799274
+  0-CMU_106_106_22_poses:
+    description: 0-CMU_106_106_22_poses
+    difficulty: 1.0
+    trim_beg: -1
+    trim_end: -1
+    weight: 0.0055555556900799274
+  0-CMU_106_106_23_poses:
+    description: 0-CMU_106_106_23_poses
+    difficulty: 1.0
+    trim_beg: -1
+    trim_end: -1
+    weight: 0.0055555556900799274
+  0-CMU_106_106_25_poses:
+    description: 0-CMU_106_106_25_poses
+    difficulty: 1.0
+    trim_beg: -1
+    trim_end: -1
+    weight: 0.0055555556900799274
+  0-CMU_106_106_27_poses:
+    description: 0-CMU_106_106_27_poses
+    difficulty: 1.0
+    trim_beg: -1
+    trim_end: -1
+    weight: 0.0055555556900799274
+  0-CMU_106_106_29_poses:
+    description: 0-CMU_106_106_29_poses
+    difficulty: 1.0
+    trim_beg: -1
+    trim_end: -1
+    weight: 0.0055555556900799274
+  0-CMU_106_106_31_poses:
+    description: 0-CMU_106_106_31_poses
+    difficulty: 1.0
+    trim_beg: -1
+    trim_end: -1
+    weight: 0.0055555556900799274
+  0-CMU_106_106_32_poses:
+    description: 0-CMU_106_106_32_poses
+    difficulty: 1.0
+    trim_beg: -1
+    trim_end: -1
+    weight: 0.0055555556900799274
+  0-CMU_106_106_33_poses:
+    description: 0-CMU_106_106_33_poses
+    difficulty: 1.0
+    trim_beg: -1
+    trim_end: -1
+    weight: 0.0055555556900799274
+  0-CMU_107_107_02_poses:
+    description: 0-CMU_107_107_02_poses
+    difficulty: 1.0
+    trim_beg: -1
+    trim_end: -1
+    weight: 0.0055555556900799274
+  0-CMU_107_107_13_poses:
+    description: 0-CMU_107_107_13_poses
+    difficulty: 1.0
+    trim_beg: -1
+    trim_end: -1
+    weight: 0.0055555556900799274
+  0-CMU_107_107_14_poses:
+    description: 0-CMU_107_107_14_poses
+    difficulty: 1.0
+    trim_beg: -1
+    trim_end: -1
+    weight: 0.0055555556900799274
+  0-CMU_108_108_05_poses:
+    description: 0-CMU_108_108_05_poses
+    difficulty: 1.0
+    trim_beg: -1
+    trim_end: -1
+    weight: 0.0055555556900799274
+  0-CMU_111_111_04_poses:
+    description: 0-CMU_111_111_04_poses
+    difficulty: 1.0
+    trim_beg: -1
+    trim_end: -1
+    weight: 0.0055555556900799274
+  0-CMU_111_111_29_poses:
+    description: 0-CMU_111_111_29_poses
+    difficulty: 1.0
+    trim_beg: -1
+    trim_end: -1
+    weight: 0.0055555556900799274
+  0-CMU_111_111_36_poses:
+    description: 0-CMU_111_111_36_poses
+    difficulty: 1.0
+    trim_beg: -1
+    trim_end: -1
+    weight: 0.0055555556900799274
+  0-CMU_113_113_07_poses:
+    description: 0-CMU_113_113_07_poses
+    difficulty: 1.0
+    trim_beg: -1
+    trim_end: -1
+    weight: 0.0055555556900799274
+  0-CMU_113_113_12_poses:
+    description: 0-CMU_113_113_12_poses
+    difficulty: 1.0
+    trim_beg: -1
+    trim_end: -1
+    weight: 0.0055555556900799274
+  0-CMU_113_113_26_poses:
+    description: 0-CMU_113_113_26_poses
+    difficulty: 1.0
+    trim_beg: -1
+    trim_end: -1
+    weight: 0.0055555556900799274
+  0-CMU_113_113_27_poses:
+    description: 0-CMU_113_113_27_poses
+    difficulty: 1.0
+    trim_beg: -1
+    trim_end: -1
+    weight: 0.0055555556900799274
+  0-CMU_114_114_12_poses:
+    description: 0-CMU_114_114_12_poses
+    difficulty: 1.0
+    trim_beg: -1
+    trim_end: -1
+    weight: 0.0055555556900799274
+  0-CMU_132_132_02_poses:
+    description: 0-CMU_132_132_02_poses
+    difficulty: 1.0
+    trim_beg: -1
+    trim_end: -1
+    weight: 0.0055555556900799274
+  0-CMU_137_137_24_poses:
+    description: 0-CMU_137_137_24_poses
+    difficulty: 1.0
+    trim_beg: -1
+    trim_end: -1
+    weight: 0.0055555556900799274
+  0-CMU_79_79_32_poses:
+    description: 0-CMU_79_79_32_poses
+    difficulty: 1.0
+    trim_beg: -1
+    trim_end: -1
+    weight: 0.0055555556900799274
+  res_picking_1:
+    description: 0-res_picking_1
+    difficulty: 1.0
+    trim_beg: -1
+    trim_end: -1
+    weight: 0.0055555556900799274
+  res_picking_2:
+    description: 0-res_picking_2
+    difficulty: 1.0
+    trim_beg: -1
+    trim_end: -1
+    weight: 0.0055555556900799274
+  res_picking_3:
+    description: 0-res_picking_3
+    difficulty: 1.0
+    trim_beg: -1
+    trim_end: -1
+    weight: 0.0055555556900799274
+  res_picking_4:
+    description: 0-res_picking_4
+    difficulty: 1.0
+    trim_beg: -1
+    trim_end: -1
+    weight: 0.0055555556900799274
+  res_picking_5:
+    description: 0-res_picking_5
+    difficulty: 1.0
+    trim_beg: -1
+    trim_end: -1
+    weight: 0.0055555556900799274
+  res_picking_6:
+    description: 0-res_picking_6
+    difficulty: 1.0
+    trim_beg: -1
+    trim_end: -1
+    weight: 0.0055555556900799274
+  res_picking_7:
+    description: 0-res_picking_7
+    difficulty: 1.0
+    trim_beg: -1
+    trim_end: -1
+    weight: 0.0055555556900799274
+  res_picking_8:
+    description: 0-res_picking_8
+    difficulty: 1.0
+    trim_beg: -1
+    trim_end: -1
+    weight: 0.0055555556900799274
+  res_picking_9:
+    description: 0-res_picking_9
+    difficulty: 1.0
+    trim_beg: -1
+    trim_end: -1
+    weight: 0.0055555556900799274
+  res_picking_10:
+    description: 0-res_picking_10
+    difficulty: 1.0
+    trim_beg: -1
+    trim_end: -1
+    weight: 0.0055555556900799274
+  res_picking_11:
+    description: 0-res_picking_11
+    difficulty: 1.0
+    trim_beg: -1
+    trim_end: -1
+    weight: 0.0055555556900799274

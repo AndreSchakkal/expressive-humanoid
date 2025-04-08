@@ -15,7 +15,7 @@ from unitree_sdk2py.idl.unitree_go.msg.dds_ import LowState_ as LowStateGo
 from unitree_sdk2py.utils.crc import CRC
 
 from common.command_helper import create_damping_cmd, create_zero_cmd, init_cmd_hg, init_cmd_go, MotorMode
-from common.rotation_helper import get_gravity_orientation, transform_imu_data, euler_from_quaternion
+from common.rotation_helper import get_gravity_orientation, transform_imu_data
 from common.remote_controller import RemoteController, KeyMap
 from config import Config
 
@@ -104,10 +104,10 @@ class Controller:
         total_time = 2
         num_step = int(total_time / self.config.control_dt)
         
-        dof_idx = self.config.leg_joint2motor_idx + self.config.arm_waist_joint2motor_idx + + self.config.wrist_joint2motor_idx
-        kps = self.config.kps + self.config.arm_waist_kps + self.config.wrist_kps
-        kds = self.config.kds + self.config.arm_waist_kds + self.config.wrist_kds
-        default_pos = np.concatenate((self.config.default_angles, self.config.arm_waist_target, self.config.wrist_target), axis=0)
+        dof_idx = self.config.leg_joint2motor_idx + self.config.arm_waist_joint2motor_idx
+        kps = self.config.kps + self.config.arm_waist_kps
+        kds = self.config.kds + self.config.arm_waist_kds
+        default_pos = np.concatenate((self.config.default_angles, self.config.arm_waist_target), axis=0)
         dof_size = len(dof_idx)
         
         # record the current pos
@@ -147,35 +147,15 @@ class Controller:
                 self.low_cmd.motor_cmd[motor_idx].kp = self.config.arm_waist_kps[i]
                 self.low_cmd.motor_cmd[motor_idx].kd = self.config.arm_waist_kds[i]
                 self.low_cmd.motor_cmd[motor_idx].tau = 0
-            for i in range(len(self.config.wrist_joint2motor_idx)):
-                motor_idx = self.config.wrist_joint2motor_idx[i]
-                self.low_cmd.motor_cmd[motor_idx].q = self.config.wrist_target[i]
-                self.low_cmd.motor_cmd[motor_idx].qd = 0
-                self.low_cmd.motor_cmd[motor_idx].kp = self.config.wrist_kps[i]
-                self.low_cmd.motor_cmd[motor_idx].kd = self.config.wrist_kds[i]
-                self.low_cmd.motor_cmd[motor_idx].tau = 0
             self.send_cmd(self.low_cmd)
             time.sleep(self.config.control_dt)
 
     def run(self):
         self.counter += 1
-        self.episode_length_buf = self.counter
-        # # Get the current joint position and velocity
-        # for i in range(len(self.config.leg_joint2motor_idx)):
-        #     self.qj[i] = self.low_state.motor_state[self.config.leg_joint2motor_idx[i]].q
-        #     self.dqj[i] = self.low_state.motor_state[self.config.leg_joint2motor_idx[i]].dq
-
         # Get the current joint position and velocity
-        # NEED TO CHANGE THIS TO HAVE ALL THE MOTORS AND DOUBLE CHECK THE INDICES
         for i in range(len(self.config.leg_joint2motor_idx)):
             self.qj[i] = self.low_state.motor_state[self.config.leg_joint2motor_idx[i]].q
             self.dqj[i] = self.low_state.motor_state[self.config.leg_joint2motor_idx[i]].dq
-
-        for j in range(len(self.config.arm_waist_joint2motor_idx)):
-            i = j + len(self.config.leg_joint2motor_idx)
-            self.qj[i] = self.low_state.motor_state[self.config.arm_waist_joint2motor_idx[i]].q
-            self.dqj[i] = self.low_state.motor_state[self.config.arm_waist_joint2motor_idx[i]].dq
-
 
         # imu_state quaternion: w, x, y, z
         quat = self.low_state.imu_state.quaternion
@@ -206,116 +186,19 @@ class Controller:
         self.cmd[2] = self.remote_controller.rx * -1
 
         num_actions = self.config.num_actions
+        self.obs[:3] = ang_vel
+        self.obs[3:6] = gravity_orientation
+        self.obs[6:9] = self.cmd * self.config.cmd_scale * self.config.max_cmd
+        self.obs[9 : 9 + num_actions] = qj_obs
+        self.obs[9 + num_actions : 9 + num_actions * 2] = dqj_obs
+        self.obs[9 + num_actions * 2 : 9 + num_actions * 3] = self.action
+        self.obs[9 + num_actions * 3] = sin_phase
+        self.obs[9 + num_actions * 3 + 1] = cos_phase
 
-
-        roll_x, pitch_y, yaw_z =  euler_from_quaternion(quat)
-
-
-# self.obs_buf = torch.cat([motion_features, obs_buf, obs_demo, priv_explicit, priv_latent, self.obs_history_buf.view(self.num_envs, -1)], dim=-1)
-
-# motion_features = self.obs_history_buf[:, -self.cfg.env.prop_hist_len:].flatten(start_dim=1)
-
-# obs_buf =  torch.cat((#motion_id_one_hot,
-#                     self.base_ang_vel  * self.obs_scales.ang_vel,   #[1,3]
-#                     imu_obs,    #[1,2]    # imu_obs = torch.stack((self.roll, self.pitch), dim=1)
-#                     torch.sin(self.yaw - self.target_yaw)[:, None],  #[1,1]
-#                     torch.cos(self.yaw - self.target_yaw)[:, None],  #[1,1]
-#                     # self.target_pos_rel,  
-#                     self.reindex((self.dof_pos - self.default_dof_pos_all) * self.obs_scales.dof_pos),
-#                     self.reindex(self.dof_vel * self.obs_scales.dof_vel),
-#                     self.reindex(self.action_history_buf[:, -1]),
-#                     self.reindex_feet(self.contact_filt.float()*0-0.5),
-#                     ),dim=-1)
-
-# obs_demo = torch.cat((dof_pos, local_root_vel, local_root_ang_vel, roll[:, None], pitch[:, None], root_pos[:, 2:3], local_key_body_pos.view(local_key_body_pos.shape[0], -1)), dim=-1)
-
-# priv_explicit = torch.cat((0*self.base_lin_vel * self.obs_scales.lin_vel,
-#                         #    global_to_local(self.base_quat, self.rigid_body_states[:, self._key_body_ids_sim[self._key_body_ids_sim_subset], :3], self.root_states[:, :3]).view(self.num_envs, -1),
-#                             ), dim=-1)
-
-# priv_latent = torch.cat((
-#     self.mass_params_tensor,
-#     self.friction_coeffs_tensor,
-#     self.motor_strength[0] - 1, 
-#     self.motor_strength[1] - 1
-# ), dim=-1)
-
-# self.obs_history_buf = torch.where(
-#     (self.episode_length_buf <= 1)[:, None, None], 
-#     torch.stack([obs_buf] * self.cfg.env.history_len, dim=1),
-#     torch.cat([
-#         self.obs_history_buf[:, 1:],
-#         obs_buf.unsqueeze(1)
-#     ], dim=1)
-# )
-
-
-
-
-
-        # target_yaw =
-        # obs_demo = # Target motion from pre-recorded motion or from teleoperation  # NEEDS TO BE ADDED
-
-
-
-        obs_buf = torch.cat((ang_vel,
-                            roll_x, pitch_y, #imu_obs
-                            torch.sin(yaw_z - target_yaw),  # NEEDS TO BE ADDED
-                            torch.cos(yaw_z - target_yaw),  # NEEDS TO BE ADDED
-                            qj_obs,
-                            dqj_obs,
-                            self.action,   # Last action
-                            -0.5, -0.5, # self.contact_filt.float()*0-0.5         # should be a scalar if I'm not mistaken 
-                            ),dim=-1)
-
-
-        # obs_demo = # Target motion from pre-recorded motion or from teleoperation  # NEEDS TO BE ADDED
-
-        priv_explicit = torch.zeros(3)
-
-
-        # motor_strength_range = [0.8, 1.2]
-        # str_rng = motor_strength_range
-        # self.motor_strength = (str_rng[1] - str_rng[0]) * torch.rand(2, self.num_envs, self.num_actions, dtype=torch.float, device=self.device, requires_grad=False) + str_rng[0]
-
-        priv_latent = torch.zeros(4+1+num_actions+num_actions)  # for now   # NEEDS TO BE CHANGED OR UNDERSTOOD
-
-
-        if self.episode_length_buf <= 1:
-            # For a new episode, initialize the history by repeating the urrent observation.
-            history_len = 10
-            self.obs_history_buf = torch.stack([obs_buf] * history_len, dim=0)
-        else:
-            # For an ongoing episode, shift the history by dropping the oldest observation and appending the new one.
-            self.obs_history_buf = torch.cat([
-                self.obs_history_buf[1:],      # Drop the first (oldest) observation.
-                obs_buf.unsqueeze(0)           # Add the new observation at the end.
-            ], dim=0)
-
-        prop_hist_len = 4
-        motion_features = self.obs_history_buf[-prop_hist_len:].flatten()
-
-
-
-        self.obs_buf = torch.cat([motion_features, obs_buf, obs_demo, priv_explicit, priv_latent, self.obs_history_buf.view(1, -1)], dim=-1)
-
-
-
-        # self.obs[:3] = ang_vel
-        # self.obs[3:6] = gravity_orientation
-        # self.obs[6:9] = self.cmd * self.config.cmd_scale * self.config.max_cmd
-        # self.obs[9 : 9 + num_actions] = qj_obs
-        # self.obs[9 + num_actions : 9 + num_actions * 2] = dqj_obs
-        # self.obs[9 + num_actions * 2 : 9 + num_actions * 3] = self.action
-        # self.obs[9 + num_actions * 3] = sin_phase
-        # self.obs[9 + num_actions * 3 + 1] = cos_phase
-
-        # # Get the action from the policy network
-        # obs_tensor = torch.from_numpy(self.obs).unsqueeze(0)
-
-
-        obs_tensor =  self.obs_buf #.unsqueeze(0)?
+        # Get the action from the policy network
+        obs_tensor = torch.from_numpy(self.obs).unsqueeze(0)
         self.action = self.policy(obs_tensor).detach().numpy().squeeze()
+        # print("self.action ", self.action)
         
         # transform action to target_dof_pos
         target_dof_pos = self.config.default_angles + self.action * self.config.action_scale
@@ -331,18 +214,10 @@ class Controller:
 
         for i in range(len(self.config.arm_waist_joint2motor_idx)):
             motor_idx = self.config.arm_waist_joint2motor_idx[i]
-            self.low_cmd.motor_cmd[motor_idx].q = target_dof_pos[i+len(self.config.leg_joint2motor_idx)]
+            self.low_cmd.motor_cmd[motor_idx].q = self.config.arm_waist_target[i]
             self.low_cmd.motor_cmd[motor_idx].qd = 0
             self.low_cmd.motor_cmd[motor_idx].kp = self.config.arm_waist_kps[i]
             self.low_cmd.motor_cmd[motor_idx].kd = self.config.arm_waist_kds[i]
-            self.low_cmd.motor_cmd[motor_idx].tau = 0
-
-        for i in range(len(self.config.wrist_joint2motor_idx)):
-            motor_idx = self.config.wrist_joint2motor_idx[i]
-            self.low_cmd.motor_cmd[motor_idx].q = self.config.wrist_target[i]
-            self.low_cmd.motor_cmd[motor_idx].qd = 0
-            self.low_cmd.motor_cmd[motor_idx].kp = self.config.wrist_kps[i]
-            self.low_cmd.motor_cmd[motor_idx].kd = self.config.wrist_kds[i]
             self.low_cmd.motor_cmd[motor_idx].tau = 0
 
         # send the command
@@ -360,7 +235,8 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     # Load config
-    config_path = f"{LEGGED_GYM_ROOT_DIR}/deploy/deploy_real/configs/{args.config}"
+    # config_path = f"{LEGGED_GYM_ROOT_DIR}/deploy/deploy_real/configs/{args.config}"
+    config_path = f"/home/schakkal/expressive-humanoid/deploy/deploy_real/configs/{args.config}"
     config = Config(config_path)
 
     # Initialize DDS communication
@@ -377,9 +253,19 @@ if __name__ == "__main__":
     # Enter the default position state, press the A key to continue executing
     controller.default_pos_state()
 
+    import time 
+
     while True:
         try:
+            start_time = time.time()
             controller.run()
+            end_time = time.time()
+
+            # Calculate and print control frequency
+            loop_time = end_time - start_time
+            frequency = 1.0 / loop_time
+            print(f"Control Frequency: {frequency:.2f} Hz")
+
             # Press the select key to exit
             if controller.remote_controller.button[KeyMap.select] == 1:
                 break

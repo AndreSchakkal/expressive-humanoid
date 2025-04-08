@@ -73,7 +73,7 @@ def play(args):
     if args.nodelay:
         env_cfg.domain_rand.action_delay_view = 0
     env_cfg.motion.motion_curriculum = True
-    env_cfg.env.num_envs = 2#2 if not args.num_envs else args.num_envs
+    env_cfg.env.num_envs = 1#2#2 if not args.num_envs else args.num_envs
     env_cfg.env.episode_length_s = 30
     env_cfg.commands.resampling_time = 60
     env_cfg.terrain.num_rows = 5
@@ -141,6 +141,8 @@ def play(args):
         path = os.path.join(log_pth, "traced")
         model, checkpoint = get_load_path(root=path, checkpoint=args.checkpoint)
         path = os.path.join(path, model)
+        # path = "/home/schakkal/expressive-humanoid/deploy/pre_train/g1/traced/improved_config-33000-base_jit.pt"
+        # path = "/home/schakkal/expressive-humanoid/deploy/pre_train/g1/traced/test-26500-base_jit.pt"
         print("Loading jit for policy: ", path)
         policy_jit = torch.jit.load(path, map_location=env.device)
     else:
@@ -148,6 +150,10 @@ def play(args):
         estimator = ppo_runner.get_estimator_inference_policy(device=env.device)
 
     actions = torch.zeros(env.num_envs, env.num_actions, device=env.device, requires_grad=False)
+    
+    # Initialize smoothed_action (e.g., in __init__)
+    smoothed_action = torch.zeros_like(actions)
+    
     infos = {}
     infos["decoder_demo_obs"] = env.get_decoder_demo_obs() if if_distill else None
     
@@ -212,7 +218,39 @@ def play(args):
             # print("est_states ", est_states)
             # print("indices ", train_cfg.estimator.priv_start,train_cfg.estimator.priv_start+train_cfg.estimator.priv_states_dim)
             actions = policy(obs.detach(), hist_encoding=True)
-            
+
+
+        raw_actions = actions.clone()
+        # Then in your run() method, after obtaining self.action from the policy:
+        # smoothing_factor = 0.3  # adjust between 0 (more smoothing) and 1 (no smoothing)
+        # smoothed_action = (
+        #     smoothing_factor * actions + (1 - smoothing_factor) * smoothed_action
+        # )
+        # actions = smoothed_action.clone()
+
+
+        # smoothing_factor = 0.3  # adjust between 0 (more smoothing) and 1 (no smoothing)
+        # smoothed_action[:, 12:] = (
+        #     smoothing_factor * actions[:, 12:] + (1 - smoothing_factor) * smoothed_action[:, 12:]
+        # )
+        # actions[:, 12:] = smoothed_action[:, 12:].clone()
+
+
+
+        # smoothing_factor = 0.3  # adjust between 0 (more smoothing) and 1 (no smoothing)
+        # smoothed_action[:, 12:15] = (
+        #     smoothing_factor * actions[:, 12:15] + (1 - smoothing_factor) * smoothed_action[:, 12:15]
+        # )
+        # actions[:, 12:15] = smoothed_action[:, 12:15].clone()
+
+        # smoothing_factor = 0.7  # adjust between 0 (more smoothing) and 1 (no smoothing)
+        # smoothed_action[:, 15:] = (
+        #     smoothing_factor * actions[:, 15:] + (1 - smoothing_factor) * smoothed_action[:, 15:]
+        # )
+        # actions[:, 15:] = smoothed_action[:, 15:].clone()
+
+                
+        # obs, _, rews, dones, infos = env.step(actions.detach(), raw_actions.detach())
         obs, _, rews, dones, infos = env.step(actions.detach())
         
         if args.record_video:

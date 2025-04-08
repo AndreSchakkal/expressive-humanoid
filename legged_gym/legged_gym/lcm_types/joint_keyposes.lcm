@@ -1,0 +1,5 @@
+struct joint_keyposes
+{
+    double dof_pos[23];
+    double keyposes[36];
+}

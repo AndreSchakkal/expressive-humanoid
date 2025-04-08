@@ -135,8 +135,8 @@ class LeggedRobotCfg(BaseConfig):
             height_measurements = 0.02
 
     class terrain:
-        # mesh_type = 'trimesh' # "heightfield" # none, plane, heightfield or trimesh
-        mesh_type = 'plane' # "heightfield" # none, plane, heightfield or trimesh
+        mesh_type = 'trimesh' # "heightfield" # none, plane, heightfield or trimesh
+        # mesh_type = 'plane' # "heightfield" # none, plane, heightfield or trimesh
         hf2mesh_method = "grid"  # grid or fast
         max_error = 0.1 # for fast
         max_error_camera = 2
@@ -254,22 +254,24 @@ class LeggedRobotCfg(BaseConfig):
         linear_damping = 0.
         max_angular_velocity = 1000.
         max_linear_velocity = 1000.
-        armature = 0.
+        armature = 0.001
+        # armature = 0.0
         thickness = 0.01
 
     class domain_rand:
-        randomize_friction = True
+        randomize_friction = False ###True
         friction_range = [0.6, 2.]
-        randomize_base_mass = True
+        randomize_base_mass = False ###True
         added_mass_range = [-1., 5]
-        randomize_base_com = True
+        randomize_base_com = False ###True
         added_com_range = [-0.07, 0.07]
-        push_robots = True
+        push_robots = False ###True
         push_interval_s = 8
         max_push_vel_xy = 0.3
 
-        randomize_motor = True
+        randomize_motor = False ###True
         motor_strength_range = [0.8, 1.2]
+        # motor_strength_range = [1., 1.]
 
         # delay_update_global_steps = 24 * 8000
         delay_update_global_steps = 24 * 13000

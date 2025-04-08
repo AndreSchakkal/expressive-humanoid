@@ -96,6 +96,7 @@ class MotionLib():
         self._dof_body_ids = dof_body_ids
         self._dof_offsets = dof_offsets
         self._num_dof = dof_offsets[-1]
+        print('self._dof_offsets ',self._dof_offsets)
         self._key_body_ids = torch.tensor(key_body_ids, device=device)
         self._device = device
         
@@ -243,6 +244,7 @@ class MotionLib():
         key_pos = (1.0 - blend_exp) * key_pos0 + blend_exp * key_pos1
         
         local_rot = torch_utils.slerp(local_rot0, local_rot1, torch.unsqueeze(blend, axis=-1))
+        # print("local_rot ", local_rot.shape)
         dof_pos = self._local_rotation_to_dof(local_rot)
 
         if get_lbp:
@@ -455,7 +457,6 @@ class MotionLib():
 
         n = local_rot.shape[0]
         dof_pos = torch.zeros((n, self._num_dof), dtype=torch.float, device=self._device)
-
         for j in range(len(body_ids)):
             body_id = body_ids[j]
             joint_offset = dof_offsets[j]
@@ -472,6 +473,10 @@ class MotionLib():
 
                 joint_theta = normalize_angle(joint_theta)
                 dof_pos[:, joint_offset] = joint_theta
+            elif (joint_size == 2):
+                joint_q = local_rot[:, body_id]
+                joint_exp_map = torch_utils.quat_to_exp_map(joint_q)
+                dof_pos[:, joint_offset:(joint_offset + joint_size)] = joint_exp_map[:, :2]
 
             else:
                 print("Unsupported joint type")
@@ -483,7 +488,8 @@ class MotionLib():
         body_ids = self._dof_body_ids
         dof_offsets = self._dof_offsets
 
-        dof_vel = torch.zeros([self._num_dof], device=self._device)
+        # dof_vel = torch.zeros([self._num_dof], device=self._device)
+        dof_vel = torch.zeros(self._num_dof, device=self._device)
 
         diff_quat_data = quat_mul_norm(quat_inverse(local_rot0), local_rot1)
         diff_angle, diff_axis = quat_angle_axis(diff_quat_data)
@@ -503,6 +509,10 @@ class MotionLib():
                 assert(joint_size == 1)
                 joint_vel = local_vel[body_id]
                 dof_vel[joint_offset] = joint_vel[1] # assume joint is always along y axis
+            elif joint_size == 2:
+                joint_vel = local_vel[body_id]  # shape (3,)
+                # Take roll and pitch velocities (x and y)
+                dof_vel[joint_offset:(joint_offset + joint_size)] = joint_vel[:2]    #  ################
 
             else:
                 print("Unsupported joint type")

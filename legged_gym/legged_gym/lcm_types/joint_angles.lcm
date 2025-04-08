@@ -1,0 +1,4 @@
+struct joint_angles
+{
+    double dof_pos[23];
+}

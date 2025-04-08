@@ -242,7 +242,7 @@ class LeggedRobot(BaseTask):
         self.projected_gravity[:] = quat_rotate_inverse(self.base_quat, self.gravity_vec)
         self.base_lin_acc = (self.root_states[:, 7:10] - self.last_root_vel[:, :3]) / self.dt
 
-        print("self.base_quat ", self.base_quat)
+        # print("self.base_quat ", self.base_quat)
         self.roll, self.pitch, self.yaw = euler_from_quaternion(self.base_quat)
 
         contact = torch.norm(self.contact_forces[:, self.feet_indices], dim=-1) > 2.
@@ -601,8 +601,15 @@ class LeggedRobot(BaseTask):
             if not self.cfg.domain_rand.randomize_motor:  # TODO add strength to gain directly
                 torques = self.p_gains*(actions_scaled + self.default_dof_pos_all - self.dof_pos) - self.d_gains*self.dof_vel
             else:
+                # print("self.motor_strength ", self.motor_strength)
+                # print()
+                # print("---------")
+                # print("actions_scaled ",actions_scaled)                
+                # print("self.default_dof_pos_all ", self.default_dof_pos_all)                
+                # print("self.dof_pos ", self.dof_pos)                
+                # print("self.dof_vel ", self.dof_vel)
                 torques = self.motor_strength[0] * self.p_gains*(actions_scaled + self.default_dof_pos_all - self.dof_pos) - self.motor_strength[1] * self.d_gains*self.dof_vel
-                
+                # print("torques ", torques)  
         elif control_type=="V":
             torques = self.p_gains*(actions_scaled - self.dof_vel) - self.d_gains*(self.dof_vel - self.last_dof_vel)/self.sim_params.dt
         elif control_type=="T":

@@ -50,6 +50,7 @@ class G1Mimic(LeggedRobot):
         if not self.headless:
             self.set_camera(self.cfg.viewer.pos, self.cfg.viewer.lookat)
         self._init_buffers()
+        # print("self.dof_posself.dof_posself.dof_posself.dof_pos ", self.dof_pos)
         self._prepare_reward_function()
         self.init_done = True
         self.global_counter = 0
@@ -59,7 +60,9 @@ class G1Mimic(LeggedRobot):
         # self.rand_vx_cmd = 4*torch.rand((self.num_envs, ), device=self.device) - 2
 
         self.reset_idx(torch.arange(self.num_envs, device=self.device), init=True)
+        # print("self.dof_posself.dof_posself.dof_posself.dof_pos ", self.dof_pos)
         self.post_physics_step()
+        # print("self.dof_posself.dof_posself.dof_posself.dof_pos ", self.dof_pos)
 
     def _get_noise_scale_vec(self, cfg):
         print("self.cfg.env.n_proprio ", self.cfg.env.n_proprio)
@@ -69,102 +72,35 @@ class G1Mimic(LeggedRobot):
         noise_scale_vec[:, 7:7+self.num_dof] = self.cfg.noise.noise_scales.dof_pos
         noise_scale_vec[:, 7+self.num_dof:7+2*self.num_dof] = self.cfg.noise.noise_scales.dof_vel
         return noise_scale_vec
-    
-    def init_motions(self, cfg):
-        ## GOES IN MOTIONLIB  -  NO USE
-        self._key_body_ids = torch.tensor([3, 6, 9, 12], device=self.device)  #self._build_key_body_ids_tensor(key_bodies)
 
+
+
+    def init_motions(self, cfg):
+        self._key_body_ids = torch.tensor([3, 6, 9, 12], device=self.device)  #self._build_key_body_ids_tensor(key_bodies)
         # ['pelvis',
         # 'left_hip_pitch_link', 'left_hip_roll_link', 'left_hip_yaw_link', 'left_knee_link', 'left_ankle_pitch_link', 'left_ankle_roll_link',
         # 'right_hip_pitch_link', 'right_hip_roll_link', 'right_hip_yaw_link', 'right_knee_link', 'right_ankle_pitch_link', 'right_ankle_roll_link',
         # 'waist_yaw_link', 'waist_roll_link', 'torso_link',
         # 'left_shoulder_pitch_link', 'left_shoulder_roll_link', 'left_shoulder_yaw_link', 'left_elbow_link', 'left_rubber_hand',
         # 'right_shoulder_pitch_link', 'right_shoulder_roll_link', 'right_shoulder_yaw_link', 'right_elbow_link', 'right_rubber_hand']
-
-        ## LIST OF KEYBODY IDS
         self._key_body_ids_sim = torch.tensor([1, 4, 5, # Left Hip yaw, Knee, Ankle
-                                                7, 10, 11,
-                                                16, 19, 20, # Left Shoulder pitch, Elbow, hand
-                                                21, 24, 25], device=self.device)         
-# # ['pelvis', 'left_hip_yaw_link', 'left_hip_roll_link', 'left_hip_pitch_link', 'left_knee_link', 'left_ankle_link', 
-# # 'right_hip_yaw_link', 'right_hip_roll_link', 'right_hip_pitch_link', 'right_knee_link', 'right_ankle_link', 
-# # 'torso_link', 
-# # 'left_shoulder_pitch_link', 'left_shoulder_roll_link', 'left_shoulder_yaw_link', 'left_elbow_link', 'left_hand_keypoint_link', 
-# # 'right_shoulder_pitch_link', 'right_shoulder_roll_link', 'right_shoulder_yaw_link', 'right_elbow_link', 'right_hand_keypoint_link']
-# self._key_body_ids_sim = torch.tensor([1, 4, 5, # Left Hip yaw, Knee, Ankle
-#                                        6, 9, 10,
-#                                        12, 15, 16, # Left Shoulder pitch, Elbow, hand
-#                                        17, 20, 21], device=self.device)
-        
-        ## LIST OF INDICES OF THE KEYBODY IDS OF _key_body_ids_sim THAT ARE USED IN THE TRACKING REWARD
-        self._key_body_ids_sim_subset = torch.tensor([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], device=self.device)  # no knee and ankle
+                                               7, 10, 11,
+                                               16, 19, 20, # Left Shoulder pitch, Elbow, hand
+                                               21, 24, 25], device=self.device)
         # self._key_body_ids_sim_subset = torch.tensor([6, 7, 8, 9, 10, 11], device=self.device)  # no knee and ankle
-# self._key_body_ids_sim_subset = torch.tensor([6, 7, 8, 9, 10, 11], device=self.device)  # no knee and ankle
-       
+        self._key_body_ids_sim_subset = torch.tensor([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], device=self.device)  # no ankle
         self._num_key_bodies = len(self._key_body_ids_sim_subset)
-
-
-        ## GOES IN MOTIONLIB (represents ids of bodies in motion data data['skeleton_tree'])
         self._dof_body_ids = [1, 2, 3, # Hip, Knee, Ankle
                               4, 5, 6,
                               7,       # Torso
                               8, 9, 10, # Shoulder, Elbow, Hand
                               11, 12, 13]  # 13
-# self._dof_body_ids = [1, 2, 3, # Hip, Knee, Ankle
-#                       4, 5, 6,
-#                       7,       # Torso
-#                       8, 9, 10, # Shoulder, Elbow, Hand
-#                       11, 12, 13]  # 13
-        
-
-        ## GOES IN MOTIONLIB (represents offsets of ids of bodies in robot links) ?????????? [maybe right]  # problem is there are offsets of 2 # maybe the solution would be to keep an offset of 3 and then remove it with valid_ids
-        self._dof_offsets = [0, 3, 4, 7, 10, 11, 14, 
-                             17, 
-                             20, 21, 22, 25, 26, 27]  # 14
-    # self._dof_offsets = [0, 3, 4, 6, 9, 10, 12, 
-    #                         15, 
-    #                         18, 19, 20, 23, 24, 25]  # 14
-# self._dof_offsets = [0, 3, 4, 5, 8, 9, 10, 
-#                      11, 
-#                      14, 15, 16, 19, 20, 21]  # 14
-
-        self._valid_dof_body_ids = torch.ones(len(self._dof_body_ids)+2*4+6, device=self.device, dtype=torch.bool)  ## CHANGE
-# self._valid_dof_body_ids = torch.ones(len(self._dof_body_ids)+2*4, device=self.device, dtype=torch.bool)
-
-        self._valid_dof_body_ids[-1] = 0    ## I THINK THIS IS THE right_rubber_hand
-        self._valid_dof_body_ids[-6] = 0    ## I THINK THIS IS THE left_rubber_hand
-
-        self._valid_dof_body_ids[6] = 0    ## DISCARD ADDITIONAL ROTATION FOR left_ankle yaw  #MAYBE
-        self._valid_dof_body_ids[13] = 0    ## DISCARD ADDITIONAL ROTATION FOR right_ankle yaw
-# self._valid_dof_body_ids[-1] = 0    ## I THINK THIS IS THE right_hand_keypoint_link
-# self._valid_dof_body_ids[-6] = 0    ## I THINK THIS IS THE left_hand_keypoint_link
-
-        self.dof_indices_sim = torch.tensor([0, 1, 2,    4, 5, 6,    7, 8, 9,    14, 15, 16,    17, 18, 19,    22, 23, 24], device=self.device, dtype=torch.long)
-        self.dof_indices_motion = torch.tensor([1, 0, 2,    5, 4, 6,   8,7,9,    15, 14, 16,     18, 17, 19,   23, 22, 24], device=self.device, dtype=torch.long)
-        # self.dof_indices_sim = torch.tensor([0, 1, 2, 4, 5, 6, 7, 8, 9, 14, 15, 16, 17, 18, 19, 22, 23, 24], device=self.device, dtype=torch.long)
-        # self.dof_indices_motion = torch.tensor([2, 0, 1, 6, 4, 5, 9, 7, 8, 16, 14, 15, 19, 17, 18, 24, 22, 23], device=self.device, dtype=torch.long)
-# self.dof_indices_sim = torch.tensor([0, 1, 2, 5, 6, 7, 11, 12, 13, 16, 17, 18], device=self.device, dtype=torch.long)
-# self.dof_indices_motion = torch.tensor([2, 0, 1, 7, 5, 6, 12, 11, 13, 17, 16, 18], device=self.device, dtype=torch.long)
-        
-        # self._dof_ids_subset = torch.tensor([0, 1, 2, 5, 6, 7, 10, 11, 12, 13, 14, 15, 16, 17, 18], device=self.device)  # no knee and ankle
-        
-        
-        ## LIST OF DOF IDS THAT ARE USED IN THE TRACKING REWARD
-        # no ankle
-        self._dof_ids_subset = torch.tensor([0, 1, 2, 3, 6, 7, 8, 9, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22], device=self.device)  # no knee and ankle
-        # self._dof_ids_subset = torch.tensor([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22], device=self.device)  # no knee and ankle
-        # self._dof_ids_subset = torch.tensor([15, 16, 17, 18, 19, 20, 21, 22], device=self.device)  # no knee and ankle
-# self._dof_ids_subset = torch.tensor([10, 11, 12, 13, 14, 15, 16, 17, 18], device=self.device)  # no knee and ankle
-        self._n_demo_dof = len(self._dof_ids_subset)
-
-#['left_hip_yaw_joint', 'left_hip_roll_joint', 'left_hip_pitch_joint', 
-#'left_knee_joint', 'left_ankle_joint', 
-#'right_hip_yaw_joint', 'right_hip_roll_joint', 'right_hip_pitch_joint', 
-#'right_knee_joint', 'right_ankle_joint', 
-#'torso_joint', 
-#'left_shoulder_pitch_joint', 'left_shoulder_roll_joint', 'left_shoulder_yaw_joint', 'left_elbow_joint', 
-#'right_shoulder_pitch_joint', 'right_shoulder_roll_joint', 'right_shoulder_yaw_joint', 'right_elbow_joint']
-
+        self._dof_offsets = [0, 3, 4, 6, 9, 10, 12,
+                             15,
+                             18, 19, 20, 23, 24, 25]  # 14
+        self._valid_dof_body_ids = torch.ones(len(self._dof_body_ids)+2*6, device=self.device, dtype=torch.bool)
+        self._valid_dof_body_ids[-1] = 0
+        self._valid_dof_body_ids[-6] = 0
         # ['left_hip_pitch_joint', 'left_hip_roll_joint', 'left_hip_yaw_joint',
         # 'left_knee_joint', 'left_ankle_pitch_joint', 'left_ankle_roll_joint',
         # 'right_hip_pitch_joint', 'right_hip_roll_joint', 'right_hip_yaw_joint',
@@ -172,6 +108,16 @@ class G1Mimic(LeggedRobot):
         # 'waist_yaw_joint', 'waist_roll_joint', 'waist_pitch_joint',
         # 'left_shoulder_pitch_joint', 'left_shoulder_roll_joint', 'left_shoulder_yaw_joint', 'left_elbow_joint',
         # 'right_shoulder_pitch_joint', 'right_shoulder_roll_joint', 'right_shoulder_yaw_joint', 'right_elbow_joint']
+        self.dof_indices_sim = torch.tensor(   [0, 1, 2,  4, 5,  6, 7, 8,  10, 11,  12, 13, 14,  15, 16, 17,  20, 21, 22], device=self.device, dtype=torch.long)
+        # self.dof_indices_motion = torch.tensor(   [0, 1, 2,  4, 5,  6, 7, 8,  10, 11,  12, 13, 14,  15, 16, 17,  20, 21, 22], device=self.device, dtype=torch.long)
+        self.dof_indices_motion = torch.tensor([1, 0, 2,  4, 5,  7, 6, 8,  10, 11,  14, 12, 13,  16, 15, 17,  21, 20, 22], device=self.device, dtype=torch.long)
+        # self._dof_ids_subset = torch.tensor([12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22], device=self.device)  # no knee and ankle
+        self._dof_ids_subset = torch.tensor([0, 1, 2, 3, 6, 7, 8, 9,
+                                             12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22], device=self.device)  # wholebody
+        # self._dof_ids_subset = torch.tensor([12, 15, 16, 17, 18, 19, 20, 21, 22], device=self.device)  # upper no waist
+        # self._dof_ids_subset = torch.tensor([0, 1, 2, 3, 6, 7, 8, 9,
+        #                                      12, 15, 16, 17, 18, 19, 20, 21, 22], device=self.device)  # wholebody no waist
+        self._n_demo_dof = len(self._dof_ids_subset)
         # self.dof_ids_subset = torch.tensor([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18], device=self.device, dtype=torch.long)
         # motion_name = "17_04_stealth"
         if cfg.motion.motion_type == "single":
@@ -179,8 +125,150 @@ class G1Mimic(LeggedRobot):
         else:
             assert cfg.motion.motion_type == "yaml"
             motion_file = os.path.join(ASE_DIR, f"ase/poselib/data/configs/{cfg.motion.motion_name}")
-        
+        # motion_file = os.path.join(ASE_DIR, "ase/poselib/data/retarget_npy/17_04_stealth.npy")
+        # motion_file = os.path.join(ASE_DIR, "ase/poselib/data/walk_forward_g1.npy")
+        # motion_file = os.path.join(ASE_DIR, "ase/poselib/data/walk_in_place_g1.npy")
         self._load_motion(motion_file, cfg.motion.no_keybody)
+   
+
+#     def init_motions(self, cfg):
+#         ## GOES IN MOTIONLIB  -  NO USE
+#         self._key_body_ids = torch.tensor([3, 6, 9, 12], device=self.device)  #self._build_key_body_ids_tensor(key_bodies)
+
+#         # ['pelvis',
+#         # 'left_hip_pitch_link', 'left_hip_roll_link', 'left_hip_yaw_link', 'left_knee_link', 'left_ankle_pitch_link', 'left_ankle_roll_link',
+#         # 'right_hip_pitch_link', 'right_hip_roll_link', 'right_hip_yaw_link', 'right_knee_link', 'right_ankle_pitch_link', 'right_ankle_roll_link',
+#         # 'waist_yaw_link', 'waist_roll_link', 'torso_link',
+#         # 'left_shoulder_pitch_link', 'left_shoulder_roll_link', 'left_shoulder_yaw_link', 'left_elbow_link', 'left_rubber_hand',
+#         # 'right_shoulder_pitch_link', 'right_shoulder_roll_link', 'right_shoulder_yaw_link', 'right_elbow_link', 'right_rubber_hand']
+
+#         ## LIST OF KEYBODY IDS
+#         self._key_body_ids_sim = torch.tensor([1, 4, 5, # Left Hip yaw, Knee, Ankle
+#                                                 7, 10, 11,
+#                                                 16, 19, 20, # Left Shoulder pitch, Elbow, hand
+#                                                 21, 24, 25], device=self.device)         
+# # # ['pelvis', 'left_hip_yaw_link', 'left_hip_roll_link', 'left_hip_pitch_link', 'left_knee_link', 'left_ankle_link', 
+# # # 'right_hip_yaw_link', 'right_hip_roll_link', 'right_hip_pitch_link', 'right_knee_link', 'right_ankle_link', 
+# # # 'torso_link', 
+# # # 'left_shoulder_pitch_link', 'left_shoulder_roll_link', 'left_shoulder_yaw_link', 'left_elbow_link', 'left_hand_keypoint_link', 
+# # # 'right_shoulder_pitch_link', 'right_shoulder_roll_link', 'right_shoulder_yaw_link', 'right_elbow_link', 'right_hand_keypoint_link']
+# # self._key_body_ids_sim = torch.tensor([1, 4, 5, # Left Hip yaw, Knee, Ankle
+# #                                        6, 9, 10,
+# #                                        12, 15, 16, # Left Shoulder pitch, Elbow, hand
+# #                                        17, 20, 21], device=self.device)
+        
+#         ## LIST OF INDICES OF THE KEYBODY IDS OF _key_body_ids_sim THAT ARE USED IN THE TRACKING REWARD
+#         self._key_body_ids_sim_subset = torch.tensor([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], device=self.device)  # no knee and ankle
+#         # self._key_body_ids_sim_subset = torch.tensor([6, 7, 8, 9, 10, 11], device=self.device)  # no knee and ankle
+# # self._key_body_ids_sim_subset = torch.tensor([6, 7, 8, 9, 10, 11], device=self.device)  # no knee and ankle
+       
+#         self._num_key_bodies = len(self._key_body_ids_sim_subset)
+
+
+#         ## GOES IN MOTIONLIB (represents ids of bodies in motion data data['skeleton_tree'])
+#         self._dof_body_ids = [1, 2, 3, # Hip, Knee, Ankle
+#                               4, 5, 6,
+#                               7,       # Torso
+#                               8, 9, 10, # Shoulder, Elbow, Hand
+#                               11, 12, 13]  # 13
+# # self._dof_body_ids = [1, 2, 3, # Hip, Knee, Ankle
+# #                       4, 5, 6,
+# #                       7,       # Torso
+# #                       8, 9, 10, # Shoulder, Elbow, Hand
+# #                       11, 12, 13]  # 13
+        
+
+#         ## GOES IN MOTIONLIB (represents offsets of ids of bodies in robot links) ?????????? [maybe right]  # problem is there are offsets of 2 # maybe the solution would be to keep an offset of 3 and then remove it with valid_ids
+#         self._dof_offsets = [0, 3, 4, 7, 10, 11, 14, 
+#                              17, 
+#                              20, 21, 22, 25, 26, 27]  # 14
+#     # self._dof_offsets = [0, 3, 4, 6, 9, 10, 12, 
+#     #                         15, 
+#     #                         18, 19, 20, 23, 24, 25]  # 14
+# # self._dof_offsets = [0, 3, 4, 5, 8, 9, 10, 
+# #                      11, 
+# #                      14, 15, 16, 19, 20, 21]  # 14
+
+#         self._valid_dof_body_ids = torch.ones(len(self._dof_body_ids)+2*4+6, device=self.device, dtype=torch.bool)  ## CHANGE
+# # self._valid_dof_body_ids = torch.ones(len(self._dof_body_ids)+2*4, device=self.device, dtype=torch.bool)
+
+#         self._valid_dof_body_ids[-1] = 0    ## I THINK THIS IS THE right_rubber_hand
+#         self._valid_dof_body_ids[-6] = 0    ## I THINK THIS IS THE left_rubber_hand
+
+#         self._valid_dof_body_ids[6] = 0    ## DISCARD ADDITIONAL ROTATION FOR left_ankle yaw  #MAYBE
+#         self._valid_dof_body_ids[13] = 0    ## DISCARD ADDITIONAL ROTATION FOR right_ankle yaw
+# # self._valid_dof_body_ids[-1] = 0    ## I THINK THIS IS THE right_hand_keypoint_link
+# # self._valid_dof_body_ids[-6] = 0    ## I THINK THIS IS THE left_hand_keypoint_link
+
+
+
+#         # self.dof_indices_sim = torch.tensor([0, 1, 2,    4, 5, 6,    7, 8, 9,    14, 15, 16,    17, 18, 19,    22, 23, 24], device=self.device, dtype=torch.long)
+#         # self.dof_indices_motion = torch.tensor([1, 0, 2,    5, 4, 6,   8,7,9,    15, 14, 16,     18, 17, 19,   23, 22, 24], device=self.device, dtype=torch.long)
+
+#         # self.dof_indices_motion = torch.tensor([0, 1, 2,    4, 5, 6,    7, 8, 9,    14, 15, 16,    17, 18, 19,    22, 23, 24], device=self.device, dtype=torch.long)
+       
+#         # self.dof_indices_sim = torch.tensor([0, 1, 2, 4, 5, 6, 7, 8, 9, 14, 15, 16, 17, 18, 19, 22, 23, 24], device=self.device, dtype=torch.long)
+#         # self.dof_indices_motion = torch.tensor([2, 0, 1, 6, 4, 5, 9, 7, 8, 16, 14, 15, 19, 17, 18, 24, 22, 23], device=self.device, dtype=torch.long)
+# # self.dof_indices_sim = torch.tensor([0, 1, 2, 5, 6, 7, 11, 12, 13, 16, 17, 18], device=self.device, dtype=torch.long)
+# # self.dof_indices_motion = torch.tensor([2, 0, 1, 7, 5, 6, 12, 11, 13, 17, 16, 18], device=self.device, dtype=torch.long)
+        
+#         # self._dof_ids_subset = torch.tensor([0, 1, 2, 5, 6, 7, 10, 11, 12, 13, 14, 15, 16, 17, 18], device=self.device)  # no knee and ankle
+        
+
+# ##########
+#         self.dof_indices_sim = torch.tensor([0, 1, 2,    7, 8, 9,    14, 15, 16,    17, 18, 19,    22, 23, 24], device=self.device, dtype=torch.long)
+#         # self.dof_indices_motion = torch.tensor([1, 0, 2,    8, 7, 9,    15, 14, 16,     18, 17, 19,   23, 22, 24], device=self.device, dtype=torch.long)
+
+#         # self.dof_indices_motion = torch.tensor([1, 0, 2,   8, 7, 9,   15, 14, 16,   18, 17, 19,   23, 22, 24], device=self.device, dtype=torch.long)
+# #wrong  # self.dof_indices_motion = torch.tensor([0, 2, 1,   7, 9, 8,   14, 16, 15,   17, 19, 18,   22, 24, 23], device=self.device, dtype=torch.long)
+#         # self.dof_indices_motion = torch.tensor([1, 2, 0,   8, 9, 7,   15, 16, 14,   18, 19, 17,   23, 24, 22], device=self.device, dtype=torch.long)
+#         # self.dof_indices_motion = torch.tensor([2, 0, 1,   9, 7, 8,   16, 14, 15,   19, 17, 18,   24, 22, 23], device=self.device, dtype=torch.long)
+# #wrong  # self.dof_indices_motion = torch.tensor([2, 1, 0,   9, 8, 7,   16, 15, 14,   19, 18, 17,   24, 23, 22], device=self.device, dtype=torch.long)
+#         # self.dof_indices_motion = torch.tensor([0, 1, 2,   7, 8, 9,   14, 15, 16,   17, 18, 19,   22, 23, 24], device=self.device, dtype=torch.long)
+
+
+
+#         # self.dof_indices_sim = torch.tensor([0, 1, 2,   7, 8, 9,    14, 15, 16,    17, 18, 19,    22, 23, 24], device=self.device, dtype=torch.long)
+#         # # waist
+#         self.dof_indices_motion = torch.tensor([1, 0, 2,   8, 7, 9,    16, 14, 15,     18, 17, 19,   23, 22, 24], device=self.device, dtype=torch.long)
+#         # # 1+4
+# #wrong  # self.dof_indices_motion = torch.tensor([1, 0, 2,   8, 7, 9,    16, 14, 15,     19, 17, 18,    24, 22, 23], device=self.device, dtype=torch.long)
+# #########
+
+
+
+#         ## LIST OF DOF IDS THAT ARE USED IN THE TRACKING REWARD
+#         # no ankle
+#         self._dof_ids_subset = torch.tensor([0, 1, 2, 3, 6, 7, 8, 9, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22], device=self.device)  # no knee and ankle
+#         # self._dof_ids_subset = torch.tensor([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22], device=self.device)  # no knee and ankle
+#         # self._dof_ids_subset = torch.tensor([15, 16, 17, 18, 19, 20, 21, 22], device=self.device)  # no knee and ankle
+# # self._dof_ids_subset = torch.tensor([10, 11, 12, 13, 14, 15, 16, 17, 18], device=self.device)  # no knee and ankle
+#         self._n_demo_dof = len(self._dof_ids_subset)
+
+# #['left_hip_yaw_joint', 'left_hip_roll_joint', 'left_hip_pitch_joint', 
+# #'left_knee_joint', 'left_ankle_joint', 
+# #'right_hip_yaw_joint', 'right_hip_roll_joint', 'right_hip_pitch_joint', 
+# #'right_knee_joint', 'right_ankle_joint', 
+# #'torso_joint', 
+# #'left_shoulder_pitch_joint', 'left_shoulder_roll_joint', 'left_shoulder_yaw_joint', 'left_elbow_joint', 
+# #'right_shoulder_pitch_joint', 'right_shoulder_roll_joint', 'right_shoulder_yaw_joint', 'right_elbow_joint']
+
+#         # ['left_hip_pitch_joint', 'left_hip_roll_joint', 'left_hip_yaw_joint',
+#         # 'left_knee_joint', 'left_ankle_pitch_joint', 'left_ankle_roll_joint',
+#         # 'right_hip_pitch_joint', 'right_hip_roll_joint', 'right_hip_yaw_joint',
+#         # 'right_knee_joint', 'right_ankle_pitch_joint', 'right_ankle_roll_joint',
+#         # 'waist_yaw_joint', 'waist_roll_joint', 'waist_pitch_joint',
+#         # 'left_shoulder_pitch_joint', 'left_shoulder_roll_joint', 'left_shoulder_yaw_joint', 'left_elbow_joint',
+#         # 'right_shoulder_pitch_joint', 'right_shoulder_roll_joint', 'right_shoulder_yaw_joint', 'right_elbow_joint']
+#         # self.dof_ids_subset = torch.tensor([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18], device=self.device, dtype=torch.long)
+#         # motion_name = "17_04_stealth"
+#         if cfg.motion.motion_type == "single":
+#             motion_file = os.path.join(ASE_DIR, f"ase/poselib/data/g1_retarget_npy/{cfg.motion.motion_name}.npy")
+#         else:
+#             assert cfg.motion.motion_type == "yaml"
+#             motion_file = os.path.join(ASE_DIR, f"ase/poselib/data/configs/{cfg.motion.motion_name}")
+        
+#         self._load_motion(motion_file, cfg.motion.no_keybody)
 
     def init_motion_buffers(self, cfg):
         num_motions = self._motion_lib.num_motions()
@@ -197,6 +285,8 @@ class G1Mimic(LeggedRobot):
         # self._motion_features = self._motion_lib.get_motion_features(self._motion_ids)
 
         self._motion_dt = self.dt
+
+
         self._motion_num_future_steps = self.cfg.env.n_demo_steps
         self._motion_demo_offsets = torch.arange(0, self.cfg.env.n_demo_steps * self.cfg.env.interval_demo_steps, self.cfg.env.interval_demo_steps, device=self.device)
         self._demo_obs_buf = torch.zeros((self.num_envs, self.cfg.env.n_demo_steps, self.cfg.env.n_demo), device=self.device)
@@ -228,10 +318,14 @@ class G1Mimic(LeggedRobot):
                                      regen_pkl=self.cfg.motion.regen_pkl)
         return
     
+    # def step(self, actions, raw_actions):
     def step(self, actions):
         actions = self.reindex(actions)
 
         actions.to(self.device)
+        # raw_actions.to(self.device)
+
+        # self.action_history_buf = torch.cat([self.action_history_buf[:, 1:].clone(), raw_actions[:, None, :].clone()], dim=1)
         self.action_history_buf = torch.cat([self.action_history_buf[:, 1:].clone(), actions[:, None, :].clone()], dim=1)
         if self.cfg.domain_rand.action_delay:
             if self.global_counter % self.cfg.domain_rand.delay_update_global_steps == 0:
@@ -252,6 +346,7 @@ class G1Mimic(LeggedRobot):
 
         self.actions = torch.clip(actions, -clip_actions, clip_actions).to(self.device)
         self.render()
+        # print("actions:", actions)
         
         # print("Actions:", actions.detach().cpu().numpy())
         # print("Action mean:", actions.mean().item(), "Action std:", actions.std().item())
@@ -259,6 +354,9 @@ class G1Mimic(LeggedRobot):
         # self.actions[:, [4, 9]] = torch.clamp(self.actions[:, [4, 9]], -0.5, 0.5)
         for _ in range(self.cfg.control.decimation):
             self.torques = self._compute_torques(self.actions).view(self.torques.shape)
+            
+            # print("self.torques ", self.torques)
+            
             self.gym.set_dof_actuation_force_tensor(self.sim, gymtorch.unwrap_tensor(self.torques))
             self.gym.simulate(self.sim)
             self.gym.fetch_results(self.sim, True)
@@ -338,6 +436,11 @@ class G1Mimic(LeggedRobot):
             self._update_terrain_curriculum(env_ids)
 
         # reset robot states
+        # print("dof_pos_motion ", dof_pos_motion)
+        # print("dof_vel ", dof_vel)
+        # print("root_vel ", root_vel)
+        # print("root_rot ", root_rot)
+        # print("root_pos[:, 2] ", root_pos[:, 2])
         self._reset_dofs(env_ids, dof_pos_motion, dof_vel)
         self._reset_root_states(env_ids, root_vel, root_rot, root_pos[:, 2])
 
@@ -442,7 +545,8 @@ class G1Mimic(LeggedRobot):
 
 
         sim_params = self.gym.get_sim_params(self.sim)
-        gravity = external_force + torch.Tensor([0, 0, -9.81]).to(self.device)
+        # gravity = external_force + torch.Tensor([0, 0, -9.81]).to(self.device)
+        gravity = torch.Tensor([0, 0, -9.81]).to(self.device)
         self.gravity_vec[:, :] = gravity.unsqueeze(0) / torch.norm(gravity)
         sim_params.gravity = gymapi.Vec3(gravity[0], gravity[1], gravity[2])
         self.gym.set_sim_params(self.sim, sim_params)
@@ -468,20 +572,15 @@ class G1Mimic(LeggedRobot):
     def update_demo_obs(self):
         demo_motion_times = self._motion_demo_offsets + self._motion_times[:, None]  # [num_envs, demo_dim]
         # print(demo_motion_times)
+        # print()
         root_pos, root_rot, dof_pos, root_vel, root_ang_vel, dof_vel, key_pos, local_key_body_pos \
             = self._motion_lib.get_motion_state(self._motion_ids.repeat_interleave(self._motion_num_future_steps), demo_motion_times.flatten(), get_lbp=True)
         dof_pos, dof_vel = self.reindex_dof_pos_vel(dof_pos, dof_vel)
 
-
-        ## INPUT YANG
-        # root_vel[:,[0,1,2]] = torch.tensor([0.,-5.,0.]).to('cuda:0')
-        # dof_pos = 
-        ## INPUT YANG
-
-
+        # root_vel[:,[0,1,2]] = torch.tensor([-1.,0.,0.]).to('cuda:0')
         # print(root_vel, root_vel.shape)
 
-        
+  
         self._curr_demo_root_pos[:] = root_pos.view(self.num_envs, self._motion_num_future_steps, 3)[:, 0, :]
         self._curr_demo_quat[:] = root_rot.view(self.num_envs, self._motion_num_future_steps, 4)[:, 0, :]
         self._curr_demo_root_vel[:] = root_vel.view(self.num_envs, self._motion_num_future_steps, 3)[:, 0, :]
@@ -492,6 +591,29 @@ class G1Mimic(LeggedRobot):
         #     feet_pos_global = key_pos[:, i]# - root_pos + self.root_states[:, :3]
         #     pose = gymapi.Transform(gymapi.Vec3(feet_pos_global[self.lookat_id, 0], feet_pos_global[self.lookat_id, 1], feet_pos_global[self.lookat_id, 2]), r=None)
         #     gymutil.draw_lines(edge_geom, self.gym, self.viewer, self.envs[self.lookat_id], pose)
+
+        # print()
+        # print()
+        # print()
+        # print()
+        # print()
+        # print()
+        # print()
+        # print()
+        # print()
+        # print()
+        # print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+        # print("root_pos shape:", root_pos, root_pos.shape)
+        # print("root_rot shape:", root_rot,root_rot.shape)
+        # print("root_vel shape:", root_vel, root_vel.shape)
+        # print("root_ang_vel shape:", root_ang_vel, root_ang_vel.shape)
+        # print("dof_pos[:, self._dof_ids_subset] shape:", dof_pos[:, self._dof_ids_subset], dof_pos[:, self._dof_ids_subset].shape)
+        # print("dof_vel shape:", dof_vel, dof_vel.shape)
+        # print("key_pos shape:", key_pos, key_pos.shape)
+        # print("local_key_body_pos[:, self._key_body_ids_sim_subset, :] shape:", local_key_body_pos[:, self._key_body_ids_sim_subset, :], local_key_body_pos[:, self._key_body_ids_sim_subset, :].shape)
+        # print("self._dof_offsets shape:",  np.array(self._dof_offsets), np.array(self._dof_offsets).shape)
+        # print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+
 
         demo_obs = build_demo_observations(root_pos, root_rot, root_vel, root_ang_vel, dof_pos[:, self._dof_ids_subset], dof_vel, key_pos, local_key_body_pos[:, self._key_body_ids_sim_subset, :], self._dof_offsets)
         self._demo_obs_buf[:] = demo_obs.view(self.num_envs, self.cfg.env.n_demo_steps, self.cfg.env.n_demo)[:]
@@ -552,20 +674,34 @@ class G1Mimic(LeggedRobot):
             obs_buf += (2 * torch.rand_like(obs_buf) - 1) * self.noise_scale_vec * self.cfg.noise.noise_scale
         
         obs_demo = self.compute_obs_demo()
-        # obs_demo = torch.tensor([ 9.2327e-02, -8.0047e-02, -4.5305e-02, -1.2066e-01,  6.8453e-02,
-        #                         3.3536e-02, -4.2229e-02, -6.1153e-02,  4.7212e-02,  5.0201e-03,
-        #                         4.3613e-02, -6.6849e-02,  1.3842e-01, -3.5182e-01,  1.2539e+00,
-        #                         -7.9236e-02, -1.1733e-01,  2.4667e-01,  1.1676e+00,  7.5185e-03,
-        #                         -2.5311e-03,  1.5537e-03,  2.6594e-04,  2.5125e-02, -7.1149e-04,
-        #                         4.9025e-03, -2.5057e-02,  7.2739e-01, -6.4723e-03,  6.4681e-02,
-        #                         -8.1457e-02, -1.6231e-02,  9.8279e-02, -4.1653e-01, -2.1423e-02,
-        #                         7.5010e-02, -7.1559e-01,  3.4317e-03, -6.3820e-02, -8.3817e-02,
-        #                         -2.3783e-02, -1.0309e-01, -4.1971e-01, -2.5463e-02, -9.3612e-02,
-        #                         -7.1956e-01,  8.0917e-03,  9.9057e-02,  3.1015e-01,  2.4128e-02,
-        #                         1.6404e-01,  1.2528e-01,  7.8441e-02,  1.8207e-01, -9.3122e-02,
-        #                         1.8080e-02, -1.0112e-01,  3.1067e-01,  4.2900e-02, -1.5911e-01,
-        #                         1.2563e-01,  1.1620e-01, -1.6577e-01, -8.7809e-02]).view(1,-1).to(self.device)
+        # obs_demo = torch.tensor([[-2.4745e-02,  1.2176e-01,  8.1200e-02, -6.5168e-02, -6.0663e-02,
+        #  -1.1331e-01, -9.6272e-02,  1.2682e-02, -3.0531e-02, -6.9623e-02,
+        #   9.4022e-02, -1.0719e-02,  2.0356e-01, -2.7878e-01,  1.0762e+00,
+        #  -9.1577e-01, -1.3040e+00,  2.5616e-01,  2.0081e-01,  3.9499e-03,
+        #  -4.9789e-03,  1.5506e-03,  2.9615e-02,  2.1360e-02, -1.5168e-01,
+        #  -9.8864e-03,  7.7811e-02,  7.3771e-01,  8.3883e-04,  6.2207e-02,
+        #  -8.2667e-02,  2.9788e-03,  1.4755e-01, -4.1746e-01,  3.1189e-02,
+        #   1.8327e-01, -7.1399e-01,  1.5378e-03, -6.6695e-02, -8.2658e-02,
+        #   1.1219e-02, -1.4511e-01, -4.1800e-01,  3.4049e-02, -1.7265e-01,
+        #  -7.1587e-01,  2.8161e-02,  1.2105e-01,  2.9693e-01,  3.1996e-02,
+        #   1.8049e-01,  1.0672e-01,  9.9245e-02,  1.8431e-01, -1.0877e-01,
+        #   2.4633e-02, -7.8363e-02,  3.1682e-01,  1.0982e-01, -2.8419e-01,
+        #   2.9852e-01,  3.0924e-01, -2.7392e-01,  4.0386e-01],
+        # [-3.8790e-01, -6.5256e-02, -2.3366e-01,  3.3138e-01,  2.4324e-02,
+        #  -3.1360e-02, -5.9318e-03,  8.8575e-01,  7.0752e-02, -7.3739e-02,
+        #   1.1033e-01,  3.5094e-01,  2.3271e-01,  1.7048e-01,  9.4172e-01,
+        #   1.5077e-01, -2.1636e-01,  8.6633e-02,  1.2443e-01,  1.4202e+00,
+        #   2.2207e-01, -2.8978e-02,  1.5557e-01, -1.8797e-01,  1.5873e-01,
+        #   7.4327e-02, -3.1586e-02,  7.5555e-01, -4.7287e-02,  5.5354e-02,
+        #  -1.0510e-01,  8.4925e-02,  1.0847e-01, -4.1533e-01,  1.3842e-01,
+        #   1.1922e-01, -7.1014e-01, -4.7943e-02, -7.3542e-02, -1.0431e-01,
+        #  -8.6280e-02, -1.3644e-01, -4.3810e-01, -3.0924e-01, -1.3511e-01,
+        #  -6.3828e-01, -1.6893e-02,  1.1154e-01,  2.7858e-01, -1.0254e-01,
+        #   1.8530e-01,  1.1079e-01, -9.5726e-02,  2.5189e-01, -1.0482e-01,
+        #  -5.8799e-03, -8.8035e-02,  2.9335e-01, -4.1166e-02, -1.8941e-01,
+        #   1.2348e-01,  1.7839e-01, -1.9449e-01,  7.5293e-02]]).to(self.device)
         # obs_demo = np.zeros(64)  # Target motion from pre-recorded motion or from teleoperation  # NEEDS TO BE ADDED
+        # print("obs_demo ", obs_demo)
 
         # print("obs_demo1", obs_demo)
 
@@ -584,7 +720,8 @@ class G1Mimic(LeggedRobot):
                                   ), dim=-1)
         priv_latent = torch.cat((
             self.mass_params_tensor,
-            self.friction_coeffs_tensor,
+            # self.friction_coeffs_tensor,
+            torch.zeros(self.mass_params_tensor.shape[0],1, device=self.device),
             self.motor_strength[0] - 1, 
             self.motor_strength[1] - 1
         ), dim=-1)
@@ -616,6 +753,16 @@ class G1Mimic(LeggedRobot):
         else:
             self.obs_buf = torch.cat([motion_features, obs_buf, obs_demo, priv_explicit, priv_latent, self.obs_history_buf.view(self.num_envs, -1)], dim=-1)
         
+
+        
+        # print("self.obs_buf")
+        # torch.set_printoptions(precision=25, threshold=torch.iinfo(torch.int32).max, sci_mode=False)
+        # print(self.obs_buf)
+        # print("self.obs_buf")
+        # print(self.obs_buf.dtype)
+
+        # print("self.rigid_body_states[:, self.feet_indices, 2] ", self.rigid_body_states[:, self.feet_indices, 2])
+
         self.obs_history_buf = torch.where(
             (self.episode_length_buf <= 1)[:, None, None], 
             torch.stack([obs_buf] * self.cfg.env.history_len, dim=1),
@@ -696,7 +843,7 @@ class G1Mimic(LeggedRobot):
 
 
         z = self.root_states[:, 2]
-        z_threshold_buff = z < 0.6
+        z_threshold_buff = z < 0.4
         self.reset_buf |= z_threshold_buff
 
         # demo_dofs = self._curr_demo_obs_buf[:, :self.num_dof]
@@ -1025,16 +1172,16 @@ def build_demo_observations(root_pos, root_rot, root_vel, root_ang_vel, dof_pos,
     # print()
     # print("dof_pos in build demo: ", dof_pos.shape, dof_pos)
     # print()
-    # print("dof_pos",dof_pos) 
-    # print("local_root_vel",local_root_vel) 
-    # print("local_root_ang_vel",local_root_ang_vel) 
-    # print("roll",roll[:, None]) 
-    # print("pitch",pitch[:, None]) 
-    # print("root_pos[:, 2:3]", root_pos[:, 2:3]) 
-    # print("local_key_body_pos",local_key_body_pos.view(local_key_body_pos.shape[0], -1))
+    # print("dof_pos",dof_pos.shape) 
+    # print("local_root_vel",local_root_vel.shape) 
+    # print("local_root_ang_vel",local_root_ang_vel.shape) 
+    # print("roll",roll[:, None].shape) 
+    # print("pitch",pitch[:, None].shape) 
+    # print("root_pos[:, 2:3]", root_pos[:, 2:3].shape) 
+    # print("local_key_body_pos",local_key_body_pos.view(local_key_body_pos.shape[0], -1).shape)
 
-    return torch.cat((dof_pos, local_root_vel, local_root_ang_vel, roll[:, None], pitch[:, None], root_pos[:, 2:3], torch.zeros_like(local_key_body_pos.view(local_key_body_pos.shape[0], -1))), dim=-1)
-    # return torch.cat((dof_pos, local_root_vel, local_root_ang_vel, roll[:, None], pitch[:, None], root_pos[:, 2:3], local_key_body_pos.view(local_key_body_pos.shape[0], -1)), dim=-1)
+    # return torch.cat((dof_pos, local_root_vel, local_root_ang_vel, roll[:, None], pitch[:, None], root_pos[:, 2:3], torch.zeros_like(local_key_body_pos.view(local_key_body_pos.shape[0], -1))), dim=-1)
+    return torch.cat((dof_pos, local_root_vel, local_root_ang_vel, roll[:, None], pitch[:, None], root_pos[:, 2:3], local_key_body_pos.view(local_key_body_pos.shape[0], -1)), dim=-1)
 
 @torch.jit.script
 def reindex_motion_dof(dof, indices_sim, indices_motion, valid_dof_body_ids):

@@ -1,0 +1,68 @@
+motions:
+  root: ../g1_retarget_npy/
+  res_picking_1:
+    description: 0-res_picking_1
+    difficulty: 1.0
+    trim_beg: -1
+    trim_end: -1
+    weight: 0.0055555556900799274
+  res_picking_2:
+    description: 0-res_picking_2
+    difficulty: 1.0
+    trim_beg: -1
+    trim_end: -1
+    weight: 0.0055555556900799274
+  res_picking_3:
+    description: 0-res_picking_3
+    difficulty: 1.0
+    trim_beg: -1
+    trim_end: -1
+    weight: 0.0055555556900799274
+  res_picking_4:
+    description: 0-res_picking_4
+    difficulty: 1.0
+    trim_beg: -1
+    trim_end: -1
+    weight: 0.0055555556900799274
+  res_picking_5:
+    description: 0-res_picking_5
+    difficulty: 1.0
+    trim_beg: -1
+    trim_end: -1
+    weight: 0.0055555556900799274
+  res_picking_6:
+    description: 0-res_picking_6
+    difficulty: 1.0
+    trim_beg: -1
+    trim_end: -1
+    weight: 0.0055555556900799274
+  res_picking_7:
+    description: 0-res_picking_7
+    difficulty: 1.0
+    trim_beg: -1
+    trim_end: -1
+    weight: 0.0055555556900799274
+  res_picking_8:
+    description: 0-res_picking_8
+    difficulty: 1.0
+    trim_beg: -1
+    trim_end: -1
+    weight: 0.0055555556900799274
+  res_picking_9:
+    description: 0-res_picking_9
+    difficulty: 1.0
+    trim_beg: -1
+    trim_end: -1
+    weight: 0.0055555556900799274
+  res_picking_10:
+    description: 0-res_picking_10
+    difficulty: 1.0
+    trim_beg: -1
+    trim_end: -1
+    weight: 0.0055555556900799274
+  res_picking_11:
+    description: 0-res_picking_11
+    difficulty: 1.0
+    trim_beg: -1
+    trim_end: -1
+    weight: 0.0055555556900799274

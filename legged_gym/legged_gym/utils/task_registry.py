@@ -124,6 +124,10 @@ class TaskRegistry():
         # if no args passed get command line arguments
         if args is None:
             args = get_args()
+
+            
+        # _, train_cfg = self.get_cfgs(name)
+
         # if config files are passed use them, otherwise load from the name
         if train_cfg is None:
             if name is None:
@@ -133,6 +137,7 @@ class TaskRegistry():
         else:
             if name is not None:
                 print(f"'train_cfg' provided -> Ignoring 'name={name}'")
+                
         # override cfg from args (if specified)
         _, train_cfg = update_cfg_from_args(None, train_cfg, args)
         

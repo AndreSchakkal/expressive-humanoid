@@ -11,6 +11,7 @@ from legged_gym import LEGGED_GYM_ROOT_DIR, ASE_DIR
 class G1MimicViewMotion(G1MimicEval):
     def __init__(self, cfg: LeggedRobotCfg, sim_params, physics_engine, sim_device, headless):
         self.save = True
+        self.device = sim_device
         # cfg.motion.motion_type = "single"
         # cfg.motion.motion_name = "13_20"  # comes from cmd line arg
         cfg.motion.num_envs_as_motions = True
@@ -71,14 +72,22 @@ class G1MimicViewMotion(G1MimicEval):
 
         root_pos, root_rot, dof_pos, root_vel, root_ang_vel, dof_vel, key_pos \
            = self._motion_lib.get_motion_state(motion_ids, motion_times)
-        
+
+        # root_pos = torch.zeros((self.num_envs, 3), device=self.device)
+        # # root_pos[:, 0] = 2.4134
+        # # root_pos[:, 1] = 0.0211
+        # root_pos[:, 2] = 0.7940
+        # root_rot = torch.tensor([0.0, 0.0, 0.0, 1.0], device=self.device).repeat(self.num_envs, 1) 
+
         root_vel = torch.zeros_like(root_vel)
         root_ang_vel = torch.zeros_like(root_ang_vel)
         dof_vel = torch.zeros_like(dof_vel)
 
+
         env_ids = torch.arange(self.num_envs, dtype=torch.long, device=self.device)
 
         dof_pos, dof_vel = self.reindex_dof_pos_vel(dof_pos, dof_vel)
+        print("dof_pos ", dof_pos)
 
         # if not self.save:
         #     root_pos[:, :2] = (self._curr_demo_root_pos - self.init_root_pos_global_demo + self.init_root_pos_global)[:, :2]
@@ -109,7 +118,9 @@ class G1MimicViewMotion(G1MimicEval):
                                               gymtorch.unwrap_tensor(env_ids_int32), len(env_ids_int32))
         if self.save:
             # print("self.rigid_body_states ", self.rigid_body_states)
+            # print((self.base_quat, self.rigid_body_states[:, self._key_body_ids_sim, :3], self.root_states[:, :3]))
             local_end_pos = global_to_local(self.base_quat, self.rigid_body_states[:, self._key_body_ids_sim, :3], self.root_states[:, :3])
+            print("local_end_pos ", local_end_pos)
             # print("local_end_pos ", local_end_pos.shape)
             # local_end_pos[:,:,2] = local_end_pos[:,:,2] + 0.07
             for i in range(self.num_envs):
